@@ -1,0 +1,30 @@
+{
+  "Feature List": {
+    "path": "data/processed/frozen_feature_list.json",
+    "sha256": "aec559529a37ffff9bfe2bdeb700b2abd807b4ffab55b9dd12a9c9026ec0d339"
+  },
+  "LightGBM Config": {
+    "path": "data/processed/frozen_lgbm_config.json",
+    "sha256": "d27861698af9dd2223d8e8aadfae6ac8d392c599dca184e178ae2d761c8b0a65"
+  },
+  "Fold File": {
+    "path": "data/processed/train_500_cv_folds.json",
+    "sha256": "f4c35fd5095ca45e506d05d4bfb99434e0bbebb6083b94f78d20ec51b48be61f"
+  },
+  "Excluded Job IDs v2": {
+    "path": "data/processed/excluded_train_job_ids_v2.txt",
+    "sha256": "97839027cfc63c8c37d2eb92b9b889159f3ebf7c47c1f0e3317d9a4b2a248cfd"
+  },
+  "Judge Label File": {
+    "path": "data/processed/train_judge_results.jsonl",
+    "sha256": "d3c065425f1492e26835fda32020c13b541812a605b1e4826ee74f008eadc519"
+  },
+  "Train Features Parquet": {
+    "path": "data/processed/features_train_scale_free.parquet",
+    "sha256": "88af7d02692fb69d5a2d1fd9131db194359d742ba68c5f60fa7ff2fa5c3a3d5f"
+  },
+  "Trained Model": {
+    "path": "models/lambdamart_step1_frozen.txt",
+    "sha256": "6f5d6053eb8456e0baa3ee66f9068ba978f44cbfb0119c20e9e941f9fdb6b313"
+  }
+}

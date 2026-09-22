@@ -1,0 +1,264 @@
+{
+  "per_job": [
+    {
+      "job_id": "105723_job",
+      "num_candidates": 9,
+      "random_ndcg10": 0.7074324230411434,
+      "random_mrr_ge2": 0.7483833333333333,
+      "random_mrr_ge1": 0.7483833333333333,
+      "bm25_ndcg10": 0.5403729670290308,
+      "bm25_mrr_ge2": 0.25,
+      "bm25_mrr_ge1": 0.25,
+      "bge_ndcg10": 0.8594218964108343,
+      "bge_mrr_ge2": 1.0,
+      "bge_mrr_ge1": 1.0,
+      "e5_ndcg10": 0.7127667484310589,
+      "e5_mrr_ge2": 1.0,
+      "e5_mrr_ge1": 1.0
+    },
+    {
+      "job_id": "110001_job",
+      "num_candidates": 9,
+      "random_ndcg10": 0.9126587073956264,
+      "random_mrr_ge2": 0.94415,
+      "random_mrr_ge1": 1.0,
+      "bm25_ndcg10": 0.9398956633115987,
+      "bm25_mrr_ge2": 1.0,
+      "bm25_mrr_ge1": 1.0,
+      "bge_ndcg10": 0.9146508392727373,
+      "bge_mrr_ge2": 1.0,
+      "bge_mrr_ge1": 1.0,
+      "e5_ndcg10": 0.8885096134285001,
+      "e5_mrr_ge2": 1.0,
+      "e5_mrr_ge1": 1.0
+    },
+    {
+      "job_id": "129445_job",
+      "num_candidates": 8,
+      "random_ndcg10": 0.8209138931923124,
+      "random_mrr_ge2": 0.7074983333333333,
+      "random_mrr_ge1": 0.8705833333333333,
+      "bm25_ndcg10": 0.9123627543467894,
+      "bm25_mrr_ge2": 1.0,
+      "bm25_mrr_ge1": 1.0,
+      "bge_ndcg10": 0.781159518870776,
+      "bge_mrr_ge2": 0.3333333333333333,
+      "bge_mrr_ge1": 1.0,
+      "e5_ndcg10": 0.7323094453056799,
+      "e5_mrr_ge2": 0.5,
+      "e5_mrr_ge1": 0.5
+    },
+    {
+      "job_id": "22047_job",
+      "num_candidates": 8,
+      "random_ndcg10": 0.8473557308594041,
+      "random_mrr_ge2": 0.7962333333333333,
+      "random_mrr_ge1": 0.8701333333333334,
+      "bm25_ndcg10": 0.672551419766297,
+      "bm25_mrr_ge2": 0.3333333333333333,
+      "bm25_mrr_ge1": 0.3333333333333333,
+      "bge_ndcg10": 0.8083927990734927,
+      "bge_mrr_ge2": 0.5,
+      "bge_mrr_ge1": 1.0,
+      "e5_ndcg10": 0.9912421989256416,
+      "e5_mrr_ge2": 1.0,
+      "e5_mrr_ge1": 1.0
+    },
+    {
+      "job_id": "26348_job",
+      "num_candidates": 9,
+      "random_ndcg10": 0.5796958592284678,
+      "random_mrr_ge2": 0.4561496428571429,
+      "random_mrr_ge1": 0.4561496428571429,
+      "bm25_ndcg10": 1.0,
+      "bm25_mrr_ge2": 1.0,
+      "bm25_mrr_ge1": 1.0,
+      "bge_ndcg10": 0.45749452618986164,
+      "bge_mrr_ge2": 0.25,
+      "bge_mrr_ge1": 0.25,
+      "e5_ndcg10": 0.45749452618986164,
+      "e5_mrr_ge2": 0.25,
+      "e5_mrr_ge1": 0.25
+    },
+    {
+      "job_id": "50223_job",
+      "num_candidates": 9,
+      "random_ndcg10": 0.7250503441511614,
+      "random_mrr_ge2": 0.67038,
+      "random_mrr_ge1": 0.82355,
+      "bm25_ndcg10": 0.5860236747954827,
+      "bm25_mrr_ge2": 0.25,
+      "bm25_mrr_ge1": 0.5,
+      "bge_ndcg10": 0.9635197301487194,
+      "bge_mrr_ge2": 1.0,
+      "bge_mrr_ge1": 1.0,
+      "e5_ndcg10": 0.6700382554101407,
+      "e5_mrr_ge2": 0.5,
+      "e5_mrr_ge1": 0.5
+    },
+    {
+      "job_id": "53525_job",
+      "num_candidates": 9,
+      "random_ndcg10": 0.6753245826031604,
+      "random_mrr_ge2": 0.5705233333333334,
+      "random_mrr_ge1": 0.886,
+      "bm25_ndcg10": 0.5763177361796816,
+      "bm25_mrr_ge2": 0.2,
+      "bm25_mrr_ge1": 1.0,
+      "bge_ndcg10": 0.8535009818090621,
+      "bge_mrr_ge2": 1.0,
+      "bge_mrr_ge1": 1.0,
+      "e5_ndcg10": 0.7404482162828282,
+      "e5_mrr_ge2": 1.0,
+      "e5_mrr_ge1": 1.0
+    },
+    {
+      "job_id": "64381_job",
+      "num_candidates": 8,
+      "random_ndcg10": 0.7357826225697588,
+      "random_mrr_ge2": 0.706105,
+      "random_mrr_ge1": 0.93515,
+      "bm25_ndcg10": 0.6670054200763376,
+      "bm25_mrr_ge2": 0.5,
+      "bm25_mrr_ge1": 0.5,
+      "bge_ndcg10": 0.9252291728188972,
+      "bge_mrr_ge2": 1.0,
+      "bge_mrr_ge1": 1.0,
+      "e5_ndcg10": 0.6492010307078138,
+      "e5_mrr_ge2": 0.3333333333333333,
+      "e5_mrr_ge1": 1.0
+    },
+    {
+      "job_id": "70278_job",
+      "num_candidates": 8,
+      "random_ndcg10": 0.8641024038465214,
+      "random_mrr_ge2": 0.9389,
+      "random_mrr_ge1": 0.9389,
+      "bm25_ndcg10": 0.8849428642715536,
+      "bm25_mrr_ge2": 1.0,
+      "bm25_mrr_ge1": 1.0,
+      "bge_ndcg10": 0.8948013475144776,
+      "bge_mrr_ge2": 1.0,
+      "bge_mrr_ge1": 1.0,
+      "e5_ndcg10": 0.9295496220421144,
+      "e5_mrr_ge2": 1.0,
+      "e5_mrr_ge1": 1.0
+    },
+    {
+      "job_id": "75798_job",
+      "num_candidates": 9,
+      "random_ndcg10": 0.7250503441511614,
+      "random_mrr_ge2": 0.6598416666666667,
+      "random_mrr_ge1": 0.8186916666666666,
+      "bm25_ndcg10": 0.5575353310380445,
+      "bm25_mrr_ge2": 0.2,
+      "bm25_mrr_ge1": 1.0,
+      "bge_ndcg10": 0.8948478036121021,
+      "bge_mrr_ge2": 1.0,
+      "bge_mrr_ge1": 1.0,
+      "e5_ndcg10": 0.7520848375731324,
+      "e5_mrr_ge2": 0.5,
+      "e5_mrr_ge1": 0.5
+    }
+  ],
+  "summary": {
+    "bm25_ndcg10": {
+      "mean": 0.7337007830814816,
+      "ci_job_low": 0.6344595524766905,
+      "ci_job_high": 0.831351904993374
+    },
+    "bge_ndcg10": {
+      "mean": 0.8353018615720961,
+      "ci_job_low": 0.74346725661997,
+      "ci_job_high": 0.9022483998797352
+    },
+    "e5_ndcg10": {
+      "mean": 0.7523644494296773,
+      "ci_job_low": 0.6606631927901616,
+      "ci_job_high": 0.841902489749661
+    },
+    "random_ndcg10": {
+      "mean": 0.7593366911038717,
+      "ci_job_low": 0.6993593658160451,
+      "ci_job_high": 0.8174202795144033
+    },
+    "bm25_mrr_ge2": {
+      "mean": 0.5733333333333334,
+      "ci_job_low": 0.3549583333333333,
+      "ci_job_high": 0.7834166666666665
+    },
+    "bge_mrr_ge2": {
+      "mean": 0.8083333333333332,
+      "ci_job_low": 0.6,
+      "ci_job_high": 1.0
+    },
+    "e5_mrr_ge2": {
+      "mean": 0.7083333333333333,
+      "ci_job_low": 0.5333333333333333,
+      "ci_job_high": 0.9
+    },
+    "random_mrr_ge2": {
+      "mean": 0.7198164642857143,
+      "ci_job_low": 0.6333643880952381,
+      "ci_job_high": 0.8106311208333334
+    },
+    "bm25_mrr_ge1": {
+      "mean": 0.7583333333333333,
+      "ci_job_low": 0.5583333333333333,
+      "ci_job_high": 0.95
+    },
+    "bge_mrr_ge1": {
+      "mean": 0.925,
+      "ci_job_low": 0.775,
+      "ci_job_high": 1.0
+    },
+    "e5_mrr_ge1": {
+      "mean": 0.775,
+      "ci_job_low": 0.6,
+      "ci_job_high": 0.95
+    },
+    "random_mrr_ge1": {
+      "mean": 0.8347541309523809,
+      "ci_job_low": 0.7307664345238095,
+      "ci_job_high": 0.9058420833333334
+    }
+  },
+  "provenance": {
+    "BM25": {
+      "total_retrieved": 30,
+      "mean_score": 1.0666666666666667,
+      "grade_distribution": {
+        "0": 14,
+        "1": 5,
+        "2": 6,
+        "3": 5
+      },
+      "relevant_count": 11,
+      "relevant_pct": 36.666666666666664
+    },
+    "BGE": {
+      "total_retrieved": 30,
+      "mean_score": 1.9333333333333333,
+      "grade_distribution": {
+        "0": 3,
+        "1": 8,
+        "2": 7,
+        "3": 12
+      },
+      "relevant_count": 19,
+      "relevant_pct": 63.33333333333333
+    },
+    "E5": {
+      "total_retrieved": 30,
+      "mean_score": 1.7,
+      "grade_distribution": {
+        "0": 8,
+        "1": 3,
+        "2": 9,
+        "3": 10
+      },
+      "relevant_count": 19,
+      "relevant_pct": 63.33333333333333
+    }
+  }
+}

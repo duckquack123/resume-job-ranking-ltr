@@ -1,0 +1,22 @@
+{
+  "eligible_test_jobs_count": 52,
+  "test_cv_pool_clean_count": 21020,
+  "excluded_cv_ids": [
+    "114596_cv"
+  ],
+  "systems_pooled": [
+    "BM25",
+    "BGE",
+    "E5"
+  ],
+  "k_per_system": 3,
+  "total_pairs_annotator_a": 446,
+  "total_pairs_annotator_b": 115,
+  "dedup_dropped_candidates": 0,
+  "hashes": {
+    "annotator_b_job_ids": "229cf6abbb9a88f4ce7bacc278a484a719b567cb20fd585a80760e33c53ab3c6",
+    "gold_provenance": "fcf6544821d3f1b5d9d947e1f45bbccdc11c27b2a8e7e3a11295d866f8cfb69f",
+    "annotator_a_tasks": "c1dd961afbc70e04b25a9ff8949b97a759cd57ccacfcd810048f7af853cc228b",
+    "annotator_b_tasks": "28fc6a42bf9d180026e8961706fb80d7d20308e539d51a0ca6b831154129d8c3"
+  }
+}

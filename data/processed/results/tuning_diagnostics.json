@@ -1,0 +1,143 @@
+{
+  "labels_file": "data/processed/labels_tuning.json",
+  "labels_sha256": "36cae5c60a3230cf644fca74bdf642a1f36f3d06fa27202ba56e121b9c61a6b6",
+  "tuning_order_averaged": {
+    "qwk": 0.6593001841620627,
+    "spearman": 0.6486021068388912,
+    "exact_agreement": 0.5111111111111111,
+    "within_one_grade": 0.8888888888888888
+  },
+  "tuning_single_order": {
+    "qwk": 0.5517241379310345,
+    "spearman": 0.5681186337274959,
+    "exact_agreement": 0.4888888888888889,
+    "within_one_grade": 0.8222222222222222
+  },
+  "bootstrap_ci_95": {
+    "spearman": [
+      0.31708096299293886,
+      0.7546103903738326
+    ],
+    "qwk": [
+      0.32084726367634503,
+      0.7317352448333643
+    ]
+  },
+  "per_job_metrics": [
+    {
+      "job_id": "105723_job",
+      "n_pairs": 9,
+      "spearman_orig": 0.8463272660560106,
+      "spearman_avg": 0.8463272660560106,
+      "ndcg10_orig": 0.9335799553104889,
+      "ndcg10_avg": 0.9733983476116023
+    },
+    {
+      "job_id": "110001_job",
+      "n_pairs": 9,
+      "spearman_orig": 0.5976143046671969,
+      "spearman_avg": 0.4382504900892777,
+      "ndcg10_orig": 0.9915446545060641,
+      "ndcg10_avg": 0.9839710649949266
+    },
+    {
+      "job_id": "26348_job",
+      "n_pairs": 9,
+      "spearman_orig": -0.20701966780270625,
+      "spearman_avg": -0.20701966780270625,
+      "ndcg10_orig": 0.4911492931622972,
+      "ndcg10_avg": 0.4911492931622972
+    },
+    {
+      "job_id": "53525_job",
+      "n_pairs": 9,
+      "spearman_orig": 0.44798933519052037,
+      "spearman_avg": 0.5797509043642028,
+      "ndcg10_orig": 0.8545180007639733,
+      "ndcg10_avg": 0.8295314611643895
+    },
+    {
+      "job_id": "75798_job",
+      "n_pairs": 9,
+      "spearman_orig": 0.7104961680437163,
+      "spearman_avg": 0.7711482799498873,
+      "ndcg10_orig": 0.9389988150057791,
+      "ndcg10_avg": 0.9563357382719019
+    }
+  ],
+  "mean_per_job": {
+    "spearman_orig": 0.47908148123094757,
+    "spearman_avg": 0.48569145453133444,
+    "ndcg10_orig": 0.8419581437497206,
+    "ndcg10_avg": 0.8468771810410235
+  },
+  "diff_2plus_pairs_orig": [
+    {
+      "pair_id": "53525_job_169636_cv",
+      "hand_grade": 1,
+      "judge_grade": 3
+    },
+    {
+      "pair_id": "53525_job_51549_cv",
+      "hand_grade": 0,
+      "judge_grade": 2
+    },
+    {
+      "pair_id": "53525_job_184226_cv",
+      "hand_grade": 1,
+      "judge_grade": 3
+    },
+    {
+      "pair_id": "26348_job_15790_cv",
+      "hand_grade": 0,
+      "judge_grade": 2
+    },
+    {
+      "pair_id": "26348_job_110565_cv",
+      "hand_grade": 0,
+      "judge_grade": 3
+    },
+    {
+      "pair_id": "26348_job_20564_cv",
+      "hand_grade": 2,
+      "judge_grade": 0
+    },
+    {
+      "pair_id": "26348_job_190676_cv",
+      "hand_grade": 0,
+      "judge_grade": 2
+    },
+    {
+      "pair_id": "75798_job_12268_cv",
+      "hand_grade": 3,
+      "judge_grade": 1
+    }
+  ],
+  "diff_2plus_pairs_avg": [
+    {
+      "pair_id": "53525_job_51549_cv",
+      "hand_grade": 0,
+      "judge_grade": 2
+    },
+    {
+      "pair_id": "26348_job_15790_cv",
+      "hand_grade": 0,
+      "judge_grade": 2
+    },
+    {
+      "pair_id": "26348_job_110565_cv",
+      "hand_grade": 0,
+      "judge_grade": 2
+    },
+    {
+      "pair_id": "26348_job_20564_cv",
+      "hand_grade": 2,
+      "judge_grade": 0
+    },
+    {
+      "pair_id": "75798_job_12268_cv",
+      "hand_grade": 3,
+      "judge_grade": 1
+    }
+  ]
+}

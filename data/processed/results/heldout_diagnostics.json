@@ -1,0 +1,645 @@
+{
+  "labels_file": "data/processed/labels_heldout.json",
+  "labels_sha256": "5f852d903f82464b8d1b95d5588ac7ca7050693623c23c798097db47f077201d",
+  "n_pairs": 41,
+  "order_averaged": {
+    "qwk": 0.373389271801019,
+    "spearman": 0.5990614847827699,
+    "exact_agreement": 0.3170731707317073,
+    "within_one_grade_rate": 0.8536585365853658,
+    "mean_per_job_spearman": 0.3513429355396272,
+    "mean_per_job_ndcg10": 0.919953970719261,
+    "mean_random_ndcg10_expected": 0.8396388056468413
+  },
+  "single_order": {
+    "qwk": 0.39722607489597783,
+    "spearman": 0.5429192151526836,
+    "exact_agreement": 0.3902439024390244,
+    "within_one_grade_rate": 0.8536585365853658
+  },
+  "confusion_matrix": [
+    [
+      3,
+      2,
+      4,
+      0
+    ],
+    [
+      1,
+      0,
+      6,
+      1
+    ],
+    [
+      0,
+      5,
+      6,
+      0
+    ],
+    [
+      1,
+      0,
+      8,
+      4
+    ]
+  ],
+  "per_job_metrics": [
+    {
+      "job_id": "129445_job",
+      "role_family": "other",
+      "n": 8,
+      "spearman_avg": 0.051434449987363975,
+      "spearman_orig": -0.5143444998736396,
+      "ndcg10_avg": 0.8523006914968114,
+      "ndcg10_orig": 0.6957250532295701,
+      "random_ndcg10_expected": 0.8419619382526056
+    },
+    {
+      "job_id": "22047_job",
+      "role_family": "data",
+      "n": 8,
+      "spearman_avg": 0.6598288790738581,
+      "spearman_orig": 0.6598288790738581,
+      "ndcg10_avg": 0.9858814749829797,
+      "ndcg10_orig": 0.9858814749829797,
+      "random_ndcg10_expected": 0.8607750345865541
+    },
+    {
+      "job_id": "50223_job",
+      "role_family": "java",
+      "n": 9,
+      "spearman_avg": 0.8231358044408909,
+      "spearman_orig": 0.8491295666863928,
+      "ndcg10_avg": 0.9839957976645133,
+      "ndcg10_orig": 0.9894255444296808,
+      "random_ndcg10_expected": 0.768447791593163
+    },
+    {
+      "job_id": "64381_job",
+      "role_family": "qa",
+      "n": 8,
+      "spearman_avg": -0.3254070133091433,
+      "spearman_orig": -0.3254070133091433,
+      "ndcg10_avg": 0.7945336813481128,
+      "ndcg10_orig": 0.7945336813481128,
+      "random_ndcg10_expected": 0.8239281452011353
+    },
+    {
+      "job_id": "70278_job",
+      "role_family": ".net",
+      "n": 8,
+      "spearman_avg": 0.5477225575051662,
+      "spearman_orig": 0.7302967433402215,
+      "ndcg10_avg": 0.9830582081038873,
+      "ndcg10_orig": 0.9884985028392297,
+      "random_ndcg10_expected": 0.9030811186007494
+    }
+  ],
+  "per_role_family_agreement": [
+    {
+      "role_family": ".net",
+      "n": 8,
+      "exact_agreement": 0.5,
+      "within_one_grade": 1.0,
+      "hand_mean": 2.25,
+      "judge_mean": 2.0
+    },
+    {
+      "role_family": "data",
+      "n": 8,
+      "exact_agreement": 0.5,
+      "within_one_grade": 0.75,
+      "hand_mean": 2.0,
+      "judge_mean": 1.875
+    },
+    {
+      "role_family": "java",
+      "n": 9,
+      "exact_agreement": 0.2222222222222222,
+      "within_one_grade": 1.0,
+      "hand_mean": 1.4444444444444444,
+      "judge_mean": 1.1111111111111112
+    },
+    {
+      "role_family": "other",
+      "n": 8,
+      "exact_agreement": 0.375,
+      "within_one_grade": 0.625,
+      "hand_mean": 1.25,
+      "judge_mean": 2.0
+    },
+    {
+      "role_family": "qa",
+      "n": 8,
+      "exact_agreement": 0.0,
+      "within_one_grade": 0.875,
+      "hand_mean": 1.5,
+      "judge_mean": 1.625
+    }
+  ],
+  "pairs": [
+    {
+      "pair_id": "70278_job_101748_cv",
+      "job_id": "70278_job",
+      "role_family": ".net",
+      "hand_score": 3,
+      "orig_exp": 2.437258318928028,
+      "orig_round": 2,
+      "swap_exp": 1.99470171104491,
+      "swap_round": 2,
+      "avg_exp": 2.215980014986469,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "70278_job_117595_cv",
+      "job_id": "70278_job",
+      "role_family": ".net",
+      "hand_score": 3,
+      "orig_exp": 2.8173042847156875,
+      "orig_round": 3,
+      "swap_exp": 2.1062104776035566,
+      "swap_round": 2,
+      "avg_exp": 2.461757381159622,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "70278_job_182833_cv",
+      "job_id": "70278_job",
+      "role_family": ".net",
+      "hand_score": 2,
+      "orig_exp": 2.499834813048015,
+      "orig_round": 2,
+      "swap_exp": 2.2014148623329692,
+      "swap_round": 2,
+      "avg_exp": 2.350624837690492,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "70278_job_177595_cv",
+      "job_id": "70278_job",
+      "role_family": ".net",
+      "hand_score": 2,
+      "orig_exp": 2.4068138416258185,
+      "orig_round": 2,
+      "swap_exp": 2.132399729866128,
+      "swap_round": 2,
+      "avg_exp": 2.269606785745973,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "70278_job_170993_cv",
+      "job_id": "70278_job",
+      "role_family": ".net",
+      "hand_score": 3,
+      "orig_exp": 2.8669333773334578,
+      "orig_round": 3,
+      "swap_exp": 2.6216096835815454,
+      "swap_round": 3,
+      "avg_exp": 2.7442715304575014,
+      "avg_round": 3
+    },
+    {
+      "pair_id": "70278_job_112511_cv",
+      "job_id": "70278_job",
+      "role_family": ".net",
+      "hand_score": 3,
+      "orig_exp": 2.4699559990106508,
+      "orig_round": 2,
+      "swap_exp": 2.245348799957317,
+      "swap_round": 2,
+      "avg_exp": 2.357652399483984,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "70278_job_51346_cv",
+      "job_id": "70278_job",
+      "role_family": ".net",
+      "hand_score": 2,
+      "orig_exp": 2.293590492443632,
+      "orig_round": 2,
+      "swap_exp": 2.529740672713276,
+      "swap_round": 3,
+      "avg_exp": 2.411665582578454,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "70278_job_169773_cv",
+      "job_id": "70278_job",
+      "role_family": ".net",
+      "hand_score": 0,
+      "orig_exp": 0.626117848830087,
+      "orig_round": 1,
+      "swap_exp": 0.8861387090694391,
+      "swap_round": 1,
+      "avg_exp": 0.7561282789497631,
+      "avg_round": 1
+    },
+    {
+      "pair_id": "22047_job_102821_cv",
+      "job_id": "22047_job",
+      "role_family": "data",
+      "hand_score": 3,
+      "orig_exp": 2.81729114573524,
+      "orig_round": 3,
+      "swap_exp": 2.650588322619698,
+      "swap_round": 3,
+      "avg_exp": 2.733939734177469,
+      "avg_round": 3
+    },
+    {
+      "pair_id": "22047_job_102831_cv",
+      "job_id": "22047_job",
+      "role_family": "data",
+      "hand_score": 3,
+      "orig_exp": 2.622914372304689,
+      "orig_round": 3,
+      "swap_exp": 2.1804152797036087,
+      "swap_round": 2,
+      "avg_exp": 2.401664826004149,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "22047_job_127092_cv",
+      "job_id": "22047_job",
+      "role_family": "data",
+      "hand_score": 3,
+      "orig_exp": 0.20339405895752533,
+      "orig_round": 0,
+      "swap_exp": 0.08997452028577248,
+      "swap_round": 0,
+      "avg_exp": 0.1466842896216489,
+      "avg_round": 0
+    },
+    {
+      "pair_id": "22047_job_34031_cv",
+      "job_id": "22047_job",
+      "role_family": "data",
+      "hand_score": 0,
+      "orig_exp": 0.18457760041258817,
+      "orig_round": 0,
+      "swap_exp": 0.01886340251582618,
+      "swap_round": 0,
+      "avg_exp": 0.10172050146420718,
+      "avg_round": 0
+    },
+    {
+      "pair_id": "22047_job_25444_cv",
+      "job_id": "22047_job",
+      "role_family": "data",
+      "hand_score": 0,
+      "orig_exp": 1.681281151929112,
+      "orig_round": 2,
+      "swap_exp": 2.2669107880648607,
+      "swap_round": 2,
+      "avg_exp": 1.9740959699969864,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "22047_job_25363_cv",
+      "job_id": "22047_job",
+      "role_family": "data",
+      "hand_score": 3,
+      "orig_exp": 2.798318792556679,
+      "orig_round": 3,
+      "swap_exp": 2.7983090043744,
+      "swap_round": 3,
+      "avg_exp": 2.7983138984655396,
+      "avg_round": 3
+    },
+    {
+      "pair_id": "22047_job_115739_cv",
+      "job_id": "22047_job",
+      "role_family": "data",
+      "hand_score": 3,
+      "orig_exp": 2.939734369707364,
+      "orig_round": 3,
+      "swap_exp": 2.4670876652199887,
+      "swap_round": 2,
+      "avg_exp": 2.7034110174636763,
+      "avg_round": 3
+    },
+    {
+      "pair_id": "22047_job_24460_cv",
+      "job_id": "22047_job",
+      "role_family": "data",
+      "hand_score": 1,
+      "orig_exp": 2.040378238311843,
+      "orig_round": 2,
+      "swap_exp": 2.105739962047778,
+      "swap_round": 2,
+      "avg_exp": 2.073059100179811,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "129445_job_122451_cv",
+      "job_id": "129445_job",
+      "role_family": "other",
+      "hand_score": 2,
+      "orig_exp": 1.9325079876053568,
+      "orig_round": 2,
+      "swap_exp": 1.7299232953341526,
+      "swap_round": 2,
+      "avg_exp": 1.8312156414697547,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "129445_job_176769_cv",
+      "job_id": "129445_job",
+      "role_family": "other",
+      "hand_score": 2,
+      "orig_exp": 2.3488429083209397,
+      "orig_round": 2,
+      "swap_exp": 1.4563737813477222,
+      "swap_round": 1,
+      "avg_exp": 1.902608344834331,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "129445_job_123400_cv",
+      "job_id": "129445_job",
+      "role_family": "other",
+      "hand_score": 0,
+      "orig_exp": 2.0443850332737967,
+      "orig_round": 2,
+      "swap_exp": 1.649474396016475,
+      "swap_round": 2,
+      "avg_exp": 1.8469297146451358,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "129445_job_117725_cv",
+      "job_id": "129445_job",
+      "role_family": "other",
+      "hand_score": 2,
+      "orig_exp": 1.133009788756826,
+      "orig_round": 1,
+      "swap_exp": 0.9798151276847179,
+      "swap_round": 1,
+      "avg_exp": 1.056412458220772,
+      "avg_round": 1
+    },
+    {
+      "pair_id": "129445_job_163293_cv",
+      "job_id": "129445_job",
+      "role_family": "other",
+      "hand_score": 0,
+      "orig_exp": 2.817443939751384,
+      "orig_round": 3,
+      "swap_exp": 0.7607918022645974,
+      "swap_round": 1,
+      "avg_exp": 1.7891178710079907,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "129445_job_38504_cv",
+      "job_id": "129445_job",
+      "role_family": "other",
+      "hand_score": 1,
+      "orig_exp": 1.9175617227461446,
+      "orig_round": 2,
+      "swap_exp": 1.4281749185180066,
+      "swap_round": 1,
+      "avg_exp": 1.6728683206320756,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "129445_job_180753_cv",
+      "job_id": "129445_job",
+      "role_family": "other",
+      "hand_score": 2,
+      "orig_exp": 1.9998253102311745,
+      "orig_round": 2,
+      "swap_exp": 2.004618394322171,
+      "swap_round": 2,
+      "avg_exp": 2.002221852276673,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "129445_job_37877_cv",
+      "job_id": "129445_job",
+      "role_family": "other",
+      "hand_score": 1,
+      "orig_exp": 2.7771646657738316,
+      "orig_round": 3,
+      "swap_exp": 2.377765428121034,
+      "swap_round": 2,
+      "avg_exp": 2.5774650469474327,
+      "avg_round": 3
+    },
+    {
+      "pair_id": "50223_job_155093_cv",
+      "job_id": "50223_job",
+      "role_family": "java",
+      "hand_score": 2,
+      "orig_exp": 0.9301313597076734,
+      "orig_round": 1,
+      "swap_exp": 0.7337401006965931,
+      "swap_round": 1,
+      "avg_exp": 0.8319357302021333,
+      "avg_round": 1
+    },
+    {
+      "pair_id": "50223_job_182575_cv",
+      "job_id": "50223_job",
+      "role_family": "java",
+      "hand_score": 3,
+      "orig_exp": 2.2443045113280484,
+      "orig_round": 2,
+      "swap_exp": 2.4373918674798163,
+      "swap_round": 2,
+      "avg_exp": 2.3408481894039324,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "50223_job_70885_cv",
+      "job_id": "50223_job",
+      "role_family": "java",
+      "hand_score": 3,
+      "orig_exp": 2.118223562205781,
+      "orig_round": 2,
+      "swap_exp": 2.1816162487468667,
+      "swap_round": 2,
+      "avg_exp": 2.149919905476324,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "50223_job_3111_cv",
+      "job_id": "50223_job",
+      "role_family": "java",
+      "hand_score": 0,
+      "orig_exp": 0.040569114294234786,
+      "orig_round": 0,
+      "swap_exp": 0.05199518663401007,
+      "swap_round": 0,
+      "avg_exp": 0.04628215046412243,
+      "avg_round": 0
+    },
+    {
+      "pair_id": "50223_job_134651_cv",
+      "job_id": "50223_job",
+      "role_family": "java",
+      "hand_score": 0,
+      "orig_exp": 0.12020374719842805,
+      "orig_round": 0,
+      "swap_exp": 0.053664116940289996,
+      "swap_round": 0,
+      "avg_exp": 0.08693393206935902,
+      "avg_round": 0
+    },
+    {
+      "pair_id": "50223_job_162792_cv",
+      "job_id": "50223_job",
+      "role_family": "java",
+      "hand_score": 0,
+      "orig_exp": 0.7608952135827091,
+      "orig_round": 1,
+      "swap_exp": 1.9824610331257166,
+      "swap_round": 2,
+      "avg_exp": 1.3716781233542128,
+      "avg_round": 1
+    },
+    {
+      "pair_id": "50223_job_101791_cv",
+      "job_id": "50223_job",
+      "role_family": "java",
+      "hand_score": 1,
+      "orig_exp": 0.05696635930858436,
+      "orig_round": 0,
+      "swap_exp": 0.4845457164884628,
+      "swap_round": 0,
+      "avg_exp": 0.2707560378985236,
+      "avg_round": 0
+    },
+    {
+      "pair_id": "50223_job_70242_cv",
+      "job_id": "50223_job",
+      "role_family": "java",
+      "hand_score": 3,
+      "orig_exp": 2.5616981102892593,
+      "orig_round": 3,
+      "swap_exp": 2.377542719024901,
+      "swap_round": 2,
+      "avg_exp": 2.46962041465708,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "50223_job_71903_cv",
+      "job_id": "50223_job",
+      "role_family": "java",
+      "hand_score": 1,
+      "orig_exp": 1.9790302525582304,
+      "orig_round": 2,
+      "swap_exp": 2.2223075632048594,
+      "swap_round": 2,
+      "avg_exp": 2.100668907881545,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "64381_job_144143_cv",
+      "job_id": "64381_job",
+      "role_family": "qa",
+      "hand_score": 1,
+      "orig_exp": 1.8514178886307333,
+      "orig_round": 2,
+      "swap_exp": 1.2260674122709116,
+      "swap_round": 1,
+      "avg_exp": 1.5387426504508226,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "64381_job_101364_cv",
+      "job_id": "64381_job",
+      "role_family": "qa",
+      "hand_score": 2,
+      "orig_exp": 1.2870902018892385,
+      "orig_round": 1,
+      "swap_exp": 1.2621288921071687,
+      "swap_round": 1,
+      "avg_exp": 1.2746095469982035,
+      "avg_round": 1
+    },
+    {
+      "pair_id": "64381_job_130779_cv",
+      "job_id": "64381_job",
+      "role_family": "qa",
+      "hand_score": 1,
+      "orig_exp": 2.163580732700797,
+      "orig_round": 2,
+      "swap_exp": 1.9996267960440381,
+      "swap_round": 2,
+      "avg_exp": 2.0816037643724177,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "64381_job_186549_cv",
+      "job_id": "64381_job",
+      "role_family": "qa",
+      "hand_score": 2,
+      "orig_exp": 1.4165713402380584,
+      "orig_round": 1,
+      "swap_exp": 1.3640648354848104,
+      "swap_round": 1,
+      "avg_exp": 1.3903180878614343,
+      "avg_round": 1
+    },
+    {
+      "pair_id": "64381_job_91138_cv",
+      "job_id": "64381_job",
+      "role_family": "qa",
+      "hand_score": 1,
+      "orig_exp": 1.705160955737533,
+      "orig_round": 2,
+      "swap_exp": 1.9679965697444868,
+      "swap_round": 2,
+      "avg_exp": 1.8365787627410097,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "64381_job_106349_cv",
+      "job_id": "64381_job",
+      "role_family": "qa",
+      "hand_score": 0,
+      "orig_exp": 1.9873183721513614,
+      "orig_round": 2,
+      "swap_exp": 1.990164078465299,
+      "swap_round": 2,
+      "avg_exp": 1.9887412253083303,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "64381_job_174589_cv",
+      "job_id": "64381_job",
+      "role_family": "qa",
+      "hand_score": 3,
+      "orig_exp": 2.0214562531698497,
+      "orig_round": 2,
+      "swap_exp": 2.058177631255036,
+      "swap_round": 2,
+      "avg_exp": 2.039816942212443,
+      "avg_round": 2
+    },
+    {
+      "pair_id": "64381_job_184643_cv",
+      "job_id": "64381_job",
+      "role_family": "qa",
+      "hand_score": 2,
+      "orig_exp": 1.028822459871763,
+      "orig_round": 1,
+      "swap_exp": 1.0342655827316003,
+      "swap_round": 1,
+      "avg_exp": 1.0315440213016815,
+      "avg_round": 1
+    }
+  ],
+  "bootstrap_ci_95": {
+    "spearman": [
+      0.32453296397964315,
+      0.7938462130981699
+    ],
+    "qwk": [
+      0.07965202626277623,
+      0.6112798240696012
+    ],
+    "note": "Pair-level bootstrap (n=41); ignores 5-job clustering."
+  }
+}

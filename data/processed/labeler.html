@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local CV Labeler</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { display: flex; height: 90vh; gap: 20px; }
+        .pane { flex: 1; padding: 20px; background: white; border-radius: 8px; overflow-y: auto; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .controls { margin-bottom: 20px; padding: 15px; background: white; border-radius: 8px; }
+        .job-title { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .score-btn { padding: 10px 20px; margin: 5px; cursor: pointer; border: 1px solid #ccc; background: #fff; border-radius: 4px; font-size: 16px; }
+        .score-btn:hover { background: #e0e0e0; }
+        pre { white-space: pre-wrap; font-family: inherit; }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <input type="file" id="fileInput" accept=".json">
+        <input type="text" id="jobFilter" placeholder="Optional: Filter by Job IDs (comma-separated)" style="margin-left: 15px; width: 300px; padding: 5px;">
+        <span id="progress" style="margin-left: 20px; font-weight: bold;"></span>
+        <button id="saveBtn" style="float: right; padding: 10px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Save Annotations</button>
+    </div>
+    
+    <div class="container" id="workspace" style="display: none;">
+        <div class="pane">
+            <h2 class="job-title" id="jobTitle"></h2>
+            <div id="jobDesc"></div>
+        </div>
+        <div class="pane">
+            <div style="margin-bottom: 15px; background: #e8f4f8; padding: 15px; border-radius: 8px; text-align: center;">
+                <button class="score-btn" onclick="score(3)">3 - Highly Relevant</button>
+                <button class="score-btn" onclick="score(2)">2 - Somewhat Relevant</button>
+                <button class="score-btn" onclick="score(1)">1 - Marginally Relevant</button>
+                <button class="score-btn" onclick="score(0)">0 - Irrelevant</button>
+                <button class="score-btn" onclick="score(-1)" style="background: #ffebee;">Invalid / Unreadable</button>
+            </div>
+            <hr>
+            <div id="cvText" style="white-space: pre-wrap;"></div>
+        </div>
+    </div>
+
+    <script>
+        let allTasks = [];
+        let tasks = [];
+        let currentIndex = 0;
+        let results = [];
+        let startTime = null;
+
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                allTasks = JSON.parse(event.target.result);
+                applyFilter();
+            };
+            reader.readAsText(file);
+        });
+        
+        document.getElementById('jobFilter').addEventListener('change', function(e) {
+            if (allTasks.length > 0) {
+                applyFilter();
+            }
+        });
+
+        function applyFilter() {
+            const filterVal = document.getElementById('jobFilter').value.trim();
+            if (filterVal) {
+                const allowedJobs = filterVal.split(',').map(s => s.trim());
+                tasks = allTasks.filter(t => allowedJobs.some(j => t.pair_id.startsWith(j)));
+            } else {
+                tasks = [...allTasks];
+            }
+            results = [];
+            currentIndex = 0;
+            document.getElementById('workspace').style.display = 'flex';
+            showTask();
+        }
+
+        function showTask() {
+            if (currentIndex >= tasks.length) {
+                document.getElementById('workspace').innerHTML = '<h2>All tasks completed! Click Save Annotations.</h2>';
+                return;
+            }
+            const task = tasks[currentIndex];
+            document.getElementById('progress').innerText = `Task ${currentIndex + 1} of ${tasks.length}`;
+            document.getElementById('jobTitle').innerText = task.job_title;
+            document.getElementById('jobDesc').innerText = task.job_desc;
+            document.getElementById('cvText').innerText = task.cv_text;
+            startTime = Date.now();
+        }
+
+        function score(val) {
+            const task = tasks[currentIndex];
+            results.push({
+                pair_id: task.pair_id,
+                score: val,
+                start_ts: startTime,
+                end_ts: Date.now()
+            });
+            currentIndex++;
+            showTask();
+        }
+
+        document.getElementById('saveBtn').addEventListener('click', function() {
+            if (results.length === 0) return;
+            const blob = new Blob([JSON.stringify(results, null, 2)], {type: 'application/json'});
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'annotations_dev.json';
+            a.click();
+        });
+    </script>
+</body>
+</html>

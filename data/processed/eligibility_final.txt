@@ -1,0 +1,96 @@
+=== TEST JOBS ELIGIBILITY (FINAL) ===
+
+Counts: 52 pass / 20 blocked / 0 pending (Total 72)
+
+Eligible Test Jobs by Role_Family:
+security: 1
+
+Max eligible jobs per company: 3
+sql: 1
+go: 1
+data: 2
+node.js: 2
+.net: 2
+qa: 2
+ruby: 3
+python: 3
+php: 3
+java: 4
+devops: 4
+other: 5
+qa automation: 9
+javascript: 10
+id | Position | Company Name | Primary Keyword | Role_Family | Eligible | Rule
+---|---|---|---|---|---|---
+67261_job | Middle Automation QA Engineer for PSD2 directive implementation | FlexMade | QA Automation | qa automation | Y | Eligible engineering keyword
+99600_job | React Native Developer for a cloud-based IoT product | FlexMade | JavaScript | javascript | Y | Eligible engineering keyword
+40825_job | Golang Developer for Digital Outdoor Advertising Software | FlexMade | Golang | go | Y | Eligible engineering keyword
+133776_job | System Administrator | InterLogic | Sysadmin | devops | Y | Eligible engineering keyword
+3190_job | Android Engineer | InterLogic | Android | other | Y | Eligible engineering keyword
+56225_job | Junior PHP Developer (Khmelnytskyi) | InterLogic | PHP | php | Y | Eligible engineering keyword
+75894_job | Middle QA Engineer | Esurance | QA | qa | Y | Eligible engineering keyword
+133025_job | Strong Middle/Senior Front-end React.js Engineer | Esurance | JavaScript | javascript | Y | Eligible engineering keyword
+78372_job | Middle/Senior Front-End Developer (React) | Esurance | JavaScript | javascript | Y | Eligible engineering keyword
+59861_job | Lead Full Stack Developer | Poleaxe | Lead | other | Y | Override: Lead Full Stack Developer (keyword "Lead" misleading)
+126264_job | Senior SEO Specialist | Poleaxe | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+62592_job | Legal Counsel | Poleaxe | Other | other | N | Override: Legal Counsel
+83059_job | Mobile Application Developer (React Native, Strong Middle / Senior) | Brightech | JavaScript | javascript | Y | Eligible engineering keyword
+54590_job | Junior lead generation specialist | Brightech | Lead Generation | other | N | Blocked by Primary Keyword: lead generation
+82458_job | Middle Wordpress Developer | Brightech | PHP | php | Y | Eligible engineering keyword
+106332_job | Senior Automation QA Engineer / SDET Java | Playtika | QA Automation | qa automation | Y | Eligible engineering keyword
+14080_job | C# Developer (Back-end) | Playtika | .NET | .net | Y | Eligible engineering keyword
+118067_job | Senior JavaScript (TypeScript) Developer | Playtika | JavaScript | javascript | Y | Eligible engineering keyword
+112630_job | Senior Frontend Developer (Vue.js) | Provectus | JavaScript | javascript | Y | Eligible engineering keyword
+22745_job | Delivery Manager (Poland or Ukraine) | Provectus | Project Manager | project manager | N | Blocked by Primary Keyword: project manager
+78145_job | Middle/Senior DevOps Engineer (Ukraine/Poland) | Provectus | DevOps | devops | Y | Eligible engineering keyword
+10639_job | Business Analysis | Luxoft | Business Analyst | other | N | Blocked by Primary Keyword: business analyst
+134642_job | TDM with focus on QA\QC (VR-61299) | Luxoft | QA Automation | qa automation | Y | Eligible engineering keyword [FLAGGED FOR REVIEW: title unclear]
+116069_job | Senior IT Recruiter | Luxoft | HR | other | N | Blocked by Primary Keyword: hr
+45538_job | Invoicing Manager | IntellectEU | Other | other | N | Override: Invoicing Manager
+127297_job | Senior System Administrator | IntellectEU | Sysadmin | devops | Y | Eligible engineering keyword
+131292_job | Solidity (Polygon) Developer | IntellectEU | Java | java | Y | Eligible engineering keyword
+133740_job | System Administrator | BetterMe | Sysadmin | devops | Y | Eligible engineering keyword
+140058_job | VFX Artist | BetterMe | Design | design | N | Blocked by Primary Keyword: design
+8421_job | Backend Engineer (Mobile Team) | BetterMe | PHP | php | Y | Eligible engineering keyword
+128608_job | Senior Web (Marketing) Designer | Argument | Design | design | N | Blocked by Primary Keyword: design
+119860_job | Senior .NET 2043/12 | Argument | .NET | .net | Y | Eligible engineering keyword
+78456_job | Middle/Senior Frontend (React.js) | Argument | JavaScript | javascript | Y | Eligible engineering keyword
+28927_job | Engagement Manager | PLVision | Other | other | N | Override: Engagement Manager
+95530_job | QA Automation Engineer | PLVision | QA Automation | qa automation | Y | Eligible engineering keyword
+95146_job | Python Verification Engineer | PLVision | QA Automation | qa automation | Y | Eligible engineering keyword
+118824_job | Senior/Lead UX/UI Designer IRC160558 | GlobalLogic | Design | design | N | Blocked by Primary Keyword: design
+52544_job | Junior Automation Test Engineer (Python) | GlobalLogic | QA Automation | qa automation | Y | Eligible engineering keyword
+104542_job | Scrum Master, Project Manager | GlobalLogic | Project Manager | project manager | N | Blocked by Primary Keyword: project manager
+63140_job | Looking for a Senior Java Architect with ElasticSearch experience | New Wave Devs | Java | java | Y | Eligible engineering keyword
+63096_job | Looking for a MERN Developer with Visualization Library Experience | New Wave Devs | JavaScript | javascript | Y | Eligible engineering keyword
+63121_job | Looking for a Node JS Engineer | New Wave Devs | Node.js | node.js | Y | Eligible engineering keyword
+4857_job | Architect for E-commerce part | Weblium | JavaScript | javascript | Y | Eligible engineering keyword
+7962_job | Back-end Developer (NodeJS) | Weblium | Node.js | node.js | Y | Eligible engineering keyword
+16769_job | Content Marketing Manager / Copywriter | Weblium | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+95283_job | QA Automation | 3DLook | QA Automation | qa automation | Y | Eligible engineering keyword
+56658_job | Junior Python Developer | 3DLook | Python | python | Y | Eligible engineering keyword
+56698_job | Junior Python Developer | 3DLook | Python | python | Y | Eligible engineering keyword
+17502_job | Copywriter/Content marketer | Ascendix | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+28219_job | Email Marketer | Ascendix | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+57654_job | Junior Salesforce developer | Ascendix | Other | other | Y | Override: Junior Salesforce developer
+4604_job | AQA Engineer (Java) | Intellias | QA Automation | qa automation | Y | Eligible engineering keyword
+27647_job | Director of Growth Operations | Intellias | Other | other | N | Override: Director of Growth Operations
+45001_job | Intermediate Software Data Engineering | Intellias | SQL | sql | Y | Eligible engineering keyword
+19536_job | Data Analyst | Sunvery | Data Analyst | data | Y | Eligible engineering keyword
+4500_job | AQA (c#) | Sunvery | QA Automation | qa automation | Y | Eligible engineering keyword
+101411_job | Ruby Full-Stack Engineer | Sunvery | Ruby | ruby | Y | Eligible engineering keyword
+50967_job | JavaScript Angular Engineer | ELITEX | JavaScript | javascript | Y | Eligible engineering keyword
+3585_job | Angular Developer | ELITEX | Java | java | Y | Eligible engineering keyword
+101499_job | Ruby on Rails Developer | ELITEX | Ruby | ruby | Y | Eligible engineering keyword
+108220_job | Senior C++ Audio Programmer | N-IX | Unity | other | Y | Eligible engineering keyword
+80274_job | Middle/Senior Python Engineer | N-IX | Python | python | Y | Eligible engineering keyword
+98164_job | QlikSense Engineer | N-IX | Data Analyst | data | Y | Eligible engineering keyword
+63855_job | Manual qa | AboutHR | QA | qa | Y | Eligible engineering keyword
+47550_job | IT Recruiter | AboutHR | HR | other | N | Blocked by Primary Keyword: hr
+27951_job | Dynamics AX/365  Developer | AboutHR | Other | other | Y | Override: Dynamics AX/365 Developer
+74785_job | Middle Project Manager | Solar Digital | Project Manager | project manager | N | Blocked by Primary Keyword: project manager
+12727_job | Business Development Manager | Solar Digital | Sales | other | N | Blocked by Primary Keyword: sales
+65368_job | Marketing generalist | Solar Digital | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+15428_job | Cloud Network Engineer | Zazmic | Security | security | Y | Eligible engineering keyword
+125502_job | Senior RoR developer | Zazmic | Ruby | ruby | Y | Eligible engineering keyword
+50672_job | Java Engineer with relocation | Zazmic | Java | java | Y | Eligible engineering keyword

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume-Job Matching: Gold Annotation Interface</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --score-3: #16a34a;
+            --score-3-bg: #dcfce7;
+            --score-2: #0284c7;
+            --score-2-bg: #e0f2fe;
+            --score-1: #d97706;
+            --score-1-bg: #fef3c7;
+            --score-0: #dc2626;
+            --score-0-bg: #fee2e2;
+            --score-inv: #6b7280;
+            --score-inv-bg: #f3f4f6;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        header {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+
+        .header-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .badge {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 9999px;
+            background: #e2e8f0;
+            color: #475569;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            background: #ffffff;
+            color: var(--text-main);
+            transition: all 0.15s ease;
+        }
+
+        .btn:hover { background: #f1f5f9; }
+        .btn-primary {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+        .btn-primary:hover { background: var(--primary-hover); }
+
+        .progress-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .main-layout {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 320px;
+            background: #f1f5f9;
+            border-right: 1px solid var(--border-color);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            gap: 16px;
+        }
+
+        .job-nav-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            max-height: 260px;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            background: white;
+            border-radius: 6px;
+            padding: 6px;
+        }
+
+        .job-nav-item {
+            padding: 8px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid transparent;
+        }
+
+        .job-nav-item:hover { background: #f8fafc; }
+        .job-nav-item.active {
+            background: #eff6ff;
+            border-color: #bfdbfe;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .content-area {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+            background: var(--bg-color);
+        }
+
+        .pane {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+            gap: 16px;
+        }
+
+        .pane-job {
+            border-right: 1px solid var(--border-color);
+            background: #ffffff;
+            max-width: 50%;
+        }
+
+        .pane-candidate {
+            background: #ffffff;
+            max-width: 50%;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            padding: 16px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+        }
+
+        .job-header-card {
+            background: #f8fafc;
+            border-left: 4px solid var(--primary);
+        }
+
+        .section-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .text-display {
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #334155;
+            font-family: inherit;
+        }
+
+        /* Rubric box */
+        .rubric-box {
+            font-size: 12px;
+            line-height: 1.5;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        .rubric-item {
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .rubric-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
+        .rubric-badge {
+            display: inline-block;
+            font-weight: 700;
+            padding: 1px 6px;
+            border-radius: 4px;
+            margin-right: 4px;
+        }
+
+        /* Buttons */
+        .rating-bar {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .score-buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .score-btn {
+            padding: 12px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 2px solid transparent;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            transition: all 0.1s ease;
+        }
+
+        .score-btn .btn-label { font-size: 15px; font-weight: 700; }
+        .score-btn .btn-desc { font-size: 11px; opacity: 0.85; font-weight: normal; }
+
+        .btn-score-3 { background: var(--score-3-bg); color: #14532d; border-color: #86efac; }
+        .btn-score-3:hover { background: #bbf7d0; }
+        .btn-score-3.selected { border-color: var(--score-3); box-shadow: 0 0 0 2px var(--score-3); }
+
+        .btn-score-2 { background: var(--score-2-bg); color: #0c4a6e; border-color: #7dd3fc; }
+        .btn-score-2:hover { background: #bae6fd; }
+        .btn-score-2.selected { border-color: var(--score-2); box-shadow: 0 0 0 2px var(--score-2); }
+
+        .btn-score-1 { background: var(--score-1-bg); color: #78350f; border-color: #fde68a; }
+        .btn-score-1:hover { background: #fef08a; }
+        .btn-score-1.selected { border-color: var(--score-1); box-shadow: 0 0 0 2px var(--score-1); }
+
+        .btn-score-0 { background: var(--score-0-bg); color: #7f1d1d; border-color: #fca5a5; }
+        .btn-score-0:hover { background: #fecaca; }
+        .btn-score-0.selected { border-color: var(--score-0); box-shadow: 0 0 0 2px var(--score-0); }
+
+        .btn-score-inv { grid-column: span 2; background: var(--score-inv-bg); color: #374151; border-color: #d1d5db; text-align: center; }
+        .btn-score-inv:hover { background: #e5e7eb; }
+        .btn-score-inv.selected { border-color: var(--score-inv); box-shadow: 0 0 0 2px var(--score-inv); }
+
+        .candidate-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cannot-judge-container {
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
+            border-radius: 6px;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .cannot-judge-container input {
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+        }
+
+        .flag-box {
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 7px 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 13px;
+            background: #ffffff;
+            color: #1e293b;
+            outline: none;
+            cursor: pointer;
+        }
+        .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+        }
+
+        .job-notes-area {
+            width: 100%;
+            height: 70px;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            font-size: 13px;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .status-pill {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .status-completed { background: #dcfce7; color: #166534; }
+        .status-pending { background: #fef3c7; color: #92400e; }
+        .status-flagged { background: #fee2e2; color: #991b1b; }
+
+        #file-prompt {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .modal-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Start Modal -->
+    <div id="file-prompt">
+        <div class="modal-card">
+            <h2 style="margin-bottom: 12px; color: #0f172a;">Gold Test Set Annotation</h2>
+            <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">
+                Select your task JSON file (e.g. <code>annotator_a_tasks.json</code> or <code>annotator_b_tasks.json</code>).
+                All data remains 100% offline and local in your browser.
+            </p>
+            <input type="file" id="taskFileInput" accept=".json" style="margin-bottom: 16px; width: 100%;">
+            <div id="resume-box" style="display: none; margin-top: 10px; border-top: 1px solid var(--border-color); padding-top: 12px;">
+                <p style="font-size: 13px; color: #15803d; font-weight: 600; margin-bottom: 8px;">Saved progress found in browser storage!</p>
+                <button class="btn btn-primary" onclick="resumeSession()">Resume Saved Session</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-title">
+            <span>RJM Gold Labeler</span>
+            <span class="badge" id="annotatorBadge">Ready</span>
+            <span class="badge" id="saveBadge" style="background: #e0f2fe; color: #0369a1;">Autosave Active</span>
+        </div>
+        <div class="progress-container">
+            <span id="overallProgress">Job 0 / 0 | Pairs 0 / 0</span>
+        </div>
+        <div class="header-actions">
+            <button class="btn" onclick="exportAnnotations(false)">Export JSON</button>
+            <button class="btn btn-primary" onclick="exportAnnotations(true)">Save & Finish</button>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div>
+                <div class="section-title">Jobs Queue</div>
+                <div class="job-nav-list" id="jobNavList"></div>
+            </div>
+
+            <!-- Rubric Guide -->
+            <div>
+                <div class="section-title">Evaluation Rubric</div>
+                <div class="rubric-box">
+                    <div class="rubric-item">
+                        <span class="rubric-badge" style="background: var(--score-3-bg); color: #14532d;">3 Strong</span>
+                        Direct match for core stack, seniority, language depth, and domain requirements.
+                    </div>
+                    <div class="rubric-item">
+                        <span class="rubric-badge" style="background: var(--score-2-bg); color: #0c4a6e;">2 Good</span>
+                        Matches primary stack with minor gaps (e.g. adjacent tooling, slightly less tenure, or secondary skill missing).
+                    </div>
+                    <div class="rubric-item">
+                        <span class="rubric-badge" style="background: var(--score-1-bg); color: #78350f;">1 Weak</span>
+                        Minimal relevance, junior mismatch, or missing critical primary technical requirements.
+                    </div>
+                    <div class="rubric-item">
+                        <span class="rubric-badge" style="background: var(--score-0-bg); color: #7f1d1d;">0 Irrelevant</span>
+                        Wrong technical domain, mismatching core language, or entirely non-technical profile.
+                    </div>
+                    <div class="rubric-item">
+                        <span class="rubric-badge" style="background: var(--score-inv-bg); color: #374151;">Invalid</span>
+                        Corrupted text, non-English, placeholder, or empty CV text.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ignore Rules -->
+            <div>
+                <div class="section-title">Ground Rules (Ignore)</div>
+                <div class="rubric-box" style="background: #fffbeb; border-color: #fef3c7;">
+                    <ul style="padding-left: 16px; color: #92400e;">
+                        <li><strong>Ignore PII:</strong> Names, emails, phone numbers.</li>
+                        <li><strong>Ignore Salary/Location:</strong> Unless explicit hard requirement.</li>
+                        <li><strong>Do Not Infer:</strong> Evaluate strictly against demonstrated experience.</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content-area">
+            <!-- Left Pane: Job Posting -->
+            <div class="pane pane-job">
+                <div class="card job-header-card">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+                        <span class="badge" id="jobRoleFamily">Role Family</span>
+                        <span style="font-size: 12px; color: var(--text-muted);" id="jobIdDisplay">ID</span>
+                    </div>
+                    <h2 id="jobTitleDisplay" style="font-size: 18px; color: #0f172a; margin-bottom: 4px;">Job Title</h2>
+                </div>
+
+                <!-- Cannot Judge Flag -->
+                <div class="card flag-box" id="cannotJudgeJobBox">
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox" id="cannotJudgeCheckbox" onchange="toggleJobCannotJudge()">
+                        <span style="font-size: 13px; font-weight: 700; color: #9f1239;">
+                            Cannot judge this job
+                        </span>
+                    </label>
+                    <div id="jobReasonWrapper" style="display: none; margin-top: 4px;">
+                        <label style="font-size: 11px; font-weight: 700; color: #9f1239; text-transform: uppercase; margin-bottom: 4px; display: block;">
+                            Required Reason:
+                        </label>
+                        <select id="jobReasonSelect" class="form-select" onchange="onJobReasonChange()">
+                            <option value="">-- Select required reason --</option>
+                            <option value="role outside my expertise">role outside my expertise</option>
+                            <option value="CV text is empty/broken/unreadable">CV text is empty/broken/unreadable</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Job Notes Box -->
+                <div class="card">
+                    <div class="section-title">Job Notes / Observations</div>
+                    <textarea class="job-notes-area" id="jobNotesArea" placeholder="Optional notes for this job (e.g. ambiguity, special requirements)..." oninput="saveJobNotes()"></textarea>
+                </div>
+
+                <!-- Job Description -->
+                <div class="card" style="flex: 1;">
+                    <div class="section-title">Job Description</div>
+                    <div class="text-display" id="jobDescDisplay"></div>
+                </div>
+            </div>
+
+            <!-- Right Pane: Candidate Evaluation -->
+            <div class="pane pane-candidate">
+                <!-- Candidate Header & Navigation -->
+                <div class="card">
+                    <div class="candidate-nav">
+                        <div>
+                            <span class="section-title" id="candidateNumberDisplay">Candidate 1 of 9</span>
+                            <div style="font-size: 12px; color: var(--text-muted); font-family: monospace;" id="pairIdDisplay">pair_id</div>
+                        </div>
+                        <div style="display: flex; gap: 8px;">
+                            <button class="btn" onclick="navigateCandidate(-1)">&larr; Prev</button>
+                            <button class="btn" onclick="navigateCandidate(1)">Next &rarr;</button>
+                        </div>
+                    </div>
+
+                    <!-- Rating Buttons -->
+                    <div class="rating-bar" style="margin-top: 12px;">
+                        <div class="section-title">Assign Grade:</div>
+                        <div class="score-buttons-grid">
+                            <button class="score-btn btn-score-3" id="btn-score-3" onclick="recordScore(3)">
+                                <span class="btn-label">3 - Strong</span>
+                                <span class="btn-desc">Full match on stack & seniority</span>
+                            </button>
+                            <button class="score-btn btn-score-2" id="btn-score-2" onclick="recordScore(2)">
+                                <span class="btn-label">2 - Good with minor gaps</span>
+                                <span class="btn-desc">Matches primary stack, minor gap</span>
+                            </button>
+                            <button class="score-btn btn-score-1" id="btn-score-1" onclick="recordScore(1)">
+                                <span class="btn-label">1 - Weak</span>
+                                <span class="btn-desc">Junior mismatch / major gap</span>
+                            </button>
+                            <button class="score-btn btn-score-0" id="btn-score-0" onclick="recordScore(0)">
+                                <span class="btn-label">0 - Not relevant</span>
+                                <span class="btn-desc">Different tech stack / domain</span>
+                            </button>
+                            <button class="score-btn btn-score-inv" id="btn-score-inv" onclick="toggleCandidateInvalid()">
+                                <span class="btn-label">Invalid / Unreadable CV</span>
+                                <span class="btn-desc">Corrupt text, non-English, placeholder, empty CV</span>
+                            </button>
+                        </div>
+
+                        <!-- Candidate Reason Selector -->
+                        <div id="candidateReasonWrapper" style="display: none; background: #fff1f2; border: 1px solid #fecdd3; border-radius: 6px; padding: 10px; margin-top: 8px;">
+                            <label style="font-size: 11px; font-weight: 700; color: #9f1239; text-transform: uppercase; margin-bottom: 4px; display: block;">
+                                Required Invalid Reason:
+                            </label>
+                            <select id="candidateReasonSelect" class="form-select" onchange="onCandidateReasonChange()">
+                                <option value="">-- Select required reason --</option>
+                                <option value="CV text is empty/broken/unreadable">CV text is empty/broken/unreadable</option>
+                                <option value="role outside my expertise">role outside my expertise</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Candidate CV Text -->
+                <div class="card" style="flex: 1;">
+                    <div class="section-title">Candidate CV Text</div>
+                    <div class="text-display" id="cvTextDisplay"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // State
+        let taskData = [];
+        let annotations = {}; // key: pair_id -> { score, start_ts, end_ts, cannot_judge_job, is_invalid, flag_reason, notes, job_notes }
+        let jobNotes = {};    // key: job_id -> note string
+        let jobCannotJudge = {}; // key: job_id -> boolean
+        let jobCannotJudgeReason = {}; // key: job_id -> string
+        let currentJobIndex = 0;
+        let currentCandidateIndex = 0;
+        let candidateStartTime = null;
+        let storageKey = "rjm_gold_annotations_v2";
+
+        // Check localStorage on boot
+        window.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem(storageKey);
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved);
+                    if (parsed.taskData && parsed.taskData.length > 0) {
+                        document.getElementById('resume-box').style.display = 'block';
+                    }
+                } catch(e) {}
+            }
+        });
+
+        // Load JSON
+        document.getElementById('taskFileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                try {
+                    taskData = JSON.parse(evt.target.result);
+                    initInterface(file.name);
+                } catch (err) {
+                    alert("Error parsing JSON task file: " + err.message);
+                }
+            };
+            reader.readAsText(file);
+        });
+
+        function resumeSession() {
+            const saved = localStorage.getItem(storageKey);
+            if (!saved) return;
+            const state = JSON.parse(saved);
+            taskData = state.taskData;
+            annotations = state.annotations || {};
+            jobNotes = state.jobNotes || {};
+            jobCannotJudge = state.jobCannotJudge || {};
+            jobCannotJudgeReason = state.jobCannotJudgeReason || {};
+            currentJobIndex = state.currentJobIndex || 0;
+            currentCandidateIndex = state.currentCandidateIndex || 0;
+            initInterface("Resumed Session", false);
+        }
+
+        function initInterface(filename, resetState=true) {
+            document.getElementById('file-prompt').style.display = 'none';
+            document.getElementById('annotatorBadge').innerText = filename;
+            
+            if (resetState) {
+                annotations = {};
+                jobNotes = {};
+                jobCannotJudge = {};
+                jobCannotJudgeReason = {};
+                currentJobIndex = 0;
+                currentCandidateIndex = 0;
+            }
+
+            renderJobNavList();
+            loadJob(currentJobIndex, currentCandidateIndex);
+            autosave();
+        }
+
+        function renderJobNavList() {
+            const list = document.getElementById('jobNavList');
+            list.innerHTML = "";
+            let totalPairs = 0;
+            let labeledPairs = 0;
+
+            taskData.forEach((job, jIdx) => {
+                const item = document.createElement('div');
+                item.className = `job-nav-item ${jIdx === currentJobIndex ? 'active' : ''}`;
+                
+                const jobPairs = job.candidates.length;
+                totalPairs += jobPairs;
+                
+                let jobDoneCount = 0;
+                job.candidates.forEach(c => {
+                    const ann = annotations[c.pair_id];
+                    if (ann && (ann.score !== null || ann.is_invalid || ann.cannot_judge_job)) {
+                        jobDoneCount++;
+                        labeledPairs++;
+                    }
+                });
+
+                let statusBadge = `<span class="status-pill status-pending">${jobDoneCount}/${jobPairs}</span>`;
+                if (jobCannotJudge[job.job_id]) {
+                    statusBadge = `<span class="status-pill status-flagged">Flagged</span>`;
+                } else if (jobDoneCount === jobPairs) {
+                    statusBadge = `<span class="status-pill status-completed">Done</span>`;
+                }
+
+                item.innerHTML = `
+                    <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 200px;">
+                        <strong>${job.job_id}</strong> ${job.job_title}
+                    </div>
+                    ${statusBadge}
+                `;
+                item.onclick = () => { loadJob(jIdx, 0); };
+                list.appendChild(item);
+            });
+
+            document.getElementById('overallProgress').innerText = 
+                `Job ${currentJobIndex + 1}/${taskData.length} | Pairs ${labeledPairs}/${totalPairs}`;
+        }
+
+        function loadJob(jIdx, cIdx=0) {
+            currentJobIndex = jIdx;
+            currentCandidateIndex = cIdx;
+            const job = taskData[currentJobIndex];
+
+            // Render Job Info
+            document.getElementById('jobRoleFamily').innerText = job.role_family;
+            document.getElementById('jobIdDisplay').innerText = job.job_id;
+            document.getElementById('jobTitleDisplay').innerText = job.job_title;
+            document.getElementById('jobDescDisplay').innerText = job.job_desc;
+
+            // Cannot judge flag & reason
+            const isFlagged = !!jobCannotJudge[job.job_id];
+            document.getElementById('cannotJudgeCheckbox').checked = isFlagged;
+            const reasonWrapper = document.getElementById('jobReasonWrapper');
+            const reasonSelect = document.getElementById('jobReasonSelect');
+            if (isFlagged) {
+                reasonWrapper.style.display = 'block';
+                reasonSelect.value = jobCannotJudgeReason[job.job_id] || "role outside my expertise";
+            } else {
+                reasonWrapper.style.display = 'none';
+                reasonSelect.value = "";
+            }
+
+            document.getElementById('jobNotesArea').value = jobNotes[job.job_id] || "";
+
+            loadCandidate(currentCandidateIndex);
+            renderJobNavList();
+        }
+
+        function loadCandidate(cIdx) {
+            currentCandidateIndex = cIdx;
+            const job = taskData[currentJobIndex];
+            const candidate = job.candidates[currentCandidateIndex];
+
+            document.getElementById('candidateNumberDisplay').innerText = 
+                `Candidate ${currentCandidateIndex + 1} of ${job.candidates.length}`;
+            document.getElementById('pairIdDisplay').innerText = candidate.pair_id;
+            document.getElementById('cvTextDisplay').innerText = candidate.cv_text;
+
+            // Highlight selected score button if already annotated
+            document.querySelectorAll('.score-btn').forEach(btn => btn.classList.remove('selected'));
+            const reasonWrapper = document.getElementById('candidateReasonWrapper');
+            const reasonSelect = document.getElementById('candidateReasonSelect');
+
+            const ann = annotations[candidate.pair_id];
+            if (ann) {
+                if (ann.is_invalid) {
+                    const btn = document.getElementById('btn-score-inv');
+                    if (btn) btn.classList.add('selected');
+                    reasonWrapper.style.display = 'block';
+                    reasonSelect.value = ann.flag_reason || "CV text is empty/broken/unreadable";
+                } else if (ann.score !== null && ann.score !== undefined && ann.score >= 0) {
+                    const btn = document.getElementById(`btn-score-${ann.score}`);
+                    if (btn) btn.classList.add('selected');
+                    reasonWrapper.style.display = 'none';
+                    reasonSelect.value = "";
+                } else {
+                    reasonWrapper.style.display = 'none';
+                    reasonSelect.value = "";
+                }
+            } else {
+                reasonWrapper.style.display = 'none';
+                reasonSelect.value = "";
+            }
+
+            candidateStartTime = Date.now();
+        }
+
+        function recordScore(scoreVal) {
+            const job = taskData[currentJobIndex];
+            const candidate = job.candidates[currentCandidateIndex];
+            const endTime = Date.now();
+            const isJobFlagged = !!jobCannotJudge[job.job_id];
+            const jobReason = isJobFlagged ? (jobCannotJudgeReason[job.job_id] || "role outside my expertise") : null;
+
+            annotations[candidate.pair_id] = {
+                pair_id: candidate.pair_id,
+                job_id: job.job_id,
+                cv_id: candidate.cv_id,
+                score: scoreVal,
+                cannot_judge_job: isJobFlagged,
+                is_invalid: false,
+                flag_reason: isJobFlagged ? jobReason : null,
+                notes: jobNotes[job.job_id] || "",
+                job_notes: jobNotes[job.job_id] || "",
+                start_ts: candidateStartTime || endTime,
+                end_ts: endTime
+            };
+
+            autosave();
+
+            // Auto-advance to next candidate within job, or next job
+            if (currentCandidateIndex + 1 < job.candidates.length) {
+                loadCandidate(currentCandidateIndex + 1);
+            } else if (currentJobIndex + 1 < taskData.length) {
+                loadJob(currentJobIndex + 1, 0);
+            } else {
+                renderJobNavList();
+                alert("All candidate pairs completed! Please review and click 'Save & Finish' to export.");
+            }
+        }
+
+        function toggleCandidateInvalid() {
+            const job = taskData[currentJobIndex];
+            const candidate = job.candidates[currentCandidateIndex];
+            const endTime = Date.now();
+            const reasonWrapper = document.getElementById('candidateReasonWrapper');
+            const reasonSelect = document.getElementById('candidateReasonSelect');
+            const btn = document.getElementById('btn-score-inv');
+
+            const ann = annotations[candidate.pair_id];
+            if (ann && ann.is_invalid) {
+                // Deselect invalid
+                btn.classList.remove('selected');
+                reasonWrapper.style.display = 'none';
+                reasonSelect.value = "";
+                const isJobFlagged = !!jobCannotJudge[job.job_id];
+                annotations[candidate.pair_id] = {
+                    pair_id: candidate.pair_id,
+                    job_id: job.job_id,
+                    cv_id: candidate.cv_id,
+                    score: null,
+                    cannot_judge_job: isJobFlagged,
+                    is_invalid: false,
+                    flag_reason: isJobFlagged ? (jobCannotJudgeReason[job.job_id] || "role outside my expertise") : null,
+                    notes: jobNotes[job.job_id] || "",
+                    job_notes: jobNotes[job.job_id] || "",
+                    start_ts: candidateStartTime || endTime,
+                    end_ts: endTime
+                };
+            } else {
+                // Set invalid
+                document.querySelectorAll('.score-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                reasonWrapper.style.display = 'block';
+                const defaultReason = "CV text is empty/broken/unreadable";
+                reasonSelect.value = defaultReason;
+                const isJobFlagged = !!jobCannotJudge[job.job_id];
+
+                annotations[candidate.pair_id] = {
+                    pair_id: candidate.pair_id,
+                    job_id: job.job_id,
+                    cv_id: candidate.cv_id,
+                    score: -1,
+                    cannot_judge_job: isJobFlagged,
+                    is_invalid: true,
+                    flag_reason: defaultReason,
+                    notes: jobNotes[job.job_id] || "",
+                    job_notes: jobNotes[job.job_id] || "",
+                    start_ts: candidateStartTime || endTime,
+                    end_ts: endTime
+                };
+            }
+            autosave();
+            renderJobNavList();
+        }
+
+        function onCandidateReasonChange() {
+            const job = taskData[currentJobIndex];
+            const candidate = job.candidates[currentCandidateIndex];
+            const reason = document.getElementById('candidateReasonSelect').value;
+            if (annotations[candidate.pair_id] && annotations[candidate.pair_id].is_invalid) {
+                annotations[candidate.pair_id].flag_reason = reason;
+                autosave();
+            }
+        }
+
+        function toggleJobCannotJudge() {
+            const job = taskData[currentJobIndex];
+            const checked = document.getElementById('cannotJudgeCheckbox').checked;
+            jobCannotJudge[job.job_id] = checked;
+            const wrapper = document.getElementById('jobReasonWrapper');
+            const select = document.getElementById('jobReasonSelect');
+
+            if (checked) {
+                wrapper.style.display = 'block';
+                if (!select.value) {
+                    select.value = "role outside my expertise";
+                }
+                jobCannotJudgeReason[job.job_id] = select.value;
+            } else {
+                wrapper.style.display = 'none';
+                jobCannotJudgeReason[job.job_id] = null;
+                select.value = "";
+            }
+
+            const endTime = Date.now();
+            const reason = jobCannotJudgeReason[job.job_id];
+
+            job.candidates.forEach(c => {
+                if (!annotations[c.pair_id]) {
+                    annotations[c.pair_id] = {
+                        pair_id: c.pair_id,
+                        job_id: job.job_id,
+                        cv_id: c.cv_id,
+                        score: null,
+                        cannot_judge_job: checked,
+                        is_invalid: false,
+                        flag_reason: checked ? reason : null,
+                        notes: jobNotes[job.job_id] || "",
+                        job_notes: jobNotes[job.job_id] || "",
+                        start_ts: candidateStartTime || endTime,
+                        end_ts: endTime
+                    };
+                } else {
+                    annotations[c.pair_id].cannot_judge_job = checked;
+                    // If candidate is not individually invalid, update its flag_reason
+                    if (!annotations[c.pair_id].is_invalid) {
+                        annotations[c.pair_id].flag_reason = checked ? reason : null;
+                    }
+                }
+            });
+
+            autosave();
+            renderJobNavList();
+        }
+
+        function onJobReasonChange() {
+            const job = taskData[currentJobIndex];
+            const reason = document.getElementById('jobReasonSelect').value;
+            jobCannotJudgeReason[job.job_id] = reason;
+
+            job.candidates.forEach(c => {
+                if (annotations[c.pair_id] && annotations[c.pair_id].cannot_judge_job && !annotations[c.pair_id].is_invalid) {
+                    annotations[c.pair_id].flag_reason = reason;
+                }
+            });
+            autosave();
+        }
+
+        function navigateCandidate(delta) {
+            const job = taskData[currentJobIndex];
+            const nextIdx = currentCandidateIndex + delta;
+            if (nextIdx >= 0 && nextIdx < job.candidates.length) {
+                loadCandidate(nextIdx);
+            } else if (delta < 0 && currentJobIndex > 0) {
+                loadJob(currentJobIndex - 1, taskData[currentJobIndex - 1].candidates.length - 1);
+            } else if (delta > 0 && currentJobIndex + 1 < taskData.length) {
+                loadJob(currentJobIndex + 1, 0);
+            }
+        }
+
+        function saveJobNotes() {
+            const job = taskData[currentJobIndex];
+            const notes = document.getElementById('jobNotesArea').value;
+            jobNotes[job.job_id] = notes;
+            
+            job.candidates.forEach(c => {
+                if (annotations[c.pair_id]) {
+                    annotations[c.pair_id].notes = notes;
+                    annotations[c.pair_id].job_notes = notes;
+                }
+            });
+            autosave();
+        }
+
+        function autosave() {
+            const state = {
+                taskData,
+                annotations,
+                jobNotes,
+                jobCannotJudge,
+                jobCannotJudgeReason,
+                currentJobIndex,
+                currentCandidateIndex,
+                savedAt: new Date().toISOString()
+            };
+            try {
+                localStorage.setItem(storageKey, JSON.stringify(state));
+                const badge = document.getElementById('saveBadge');
+                badge.innerText = "Autosaved";
+                setTimeout(() => { badge.innerText = "Autosave Active"; }, 1500);
+            } catch(e) {
+                console.warn("Autosave to localStorage failed", e);
+            }
+        }
+
+        function exportAnnotations(isFinish=false) {
+            const results = [];
+            taskData.forEach(job => {
+                job.candidates.forEach(c => {
+                    if (annotations[c.pair_id]) {
+                        results.push(annotations[c.pair_id]);
+                    } else {
+                        const isJobFlagged = !!jobCannotJudge[job.job_id];
+                        results.push({
+                            pair_id: c.pair_id,
+                            job_id: job.job_id,
+                            cv_id: c.cv_id,
+                            score: null,
+                            cannot_judge_job: isJobFlagged,
+                            is_invalid: false,
+                            flag_reason: isJobFlagged ? (jobCannotJudgeReason[job.job_id] || "role outside my expertise") : null,
+                            notes: jobNotes[job.job_id] || "",
+                            job_notes: jobNotes[job.job_id] || "",
+                            start_ts: null,
+                            end_ts: null
+                        });
+                    }
+                });
+            });
+
+            window.lastExportedJSON = results;
+
+            const blob = new Blob([JSON.stringify(results, null, 2)], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `annotations_gold_${new Date().toISOString().slice(0,10)}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            if (isFinish) {
+                alert("Annotations export downloaded successfully!");
+            }
+        }
+    </script>
+</body>
+</html>

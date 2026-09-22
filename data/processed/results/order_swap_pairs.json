@@ -1,0 +1,802 @@
+[
+  {
+    "pair_id": "0_job_8227_cv",
+    "original_expected_score": 0.3224261410055288,
+    "swapped_expected_score": 0.4077621672719556,
+    "abs_diff": 0.08533602626642678,
+    "cv_chars": 481,
+    "cv_tokens": 100
+  },
+  {
+    "pair_id": "0_job_150851_cv",
+    "original_expected_score": 0.2260959776812942,
+    "swapped_expected_score": 0.9190049458890357,
+    "abs_diff": 0.6929089682077415,
+    "cv_chars": 259,
+    "cv_tokens": 59
+  },
+  {
+    "pair_id": "0_job_206605_cv",
+    "original_expected_score": 0.2459194120963359,
+    "swapped_expected_score": 0.5666884775517523,
+    "abs_diff": 0.32076906545541645,
+    "cv_chars": 1405,
+    "cv_tokens": 291
+  },
+  {
+    "pair_id": "0_job_45453_cv",
+    "original_expected_score": 0.3253572977419599,
+    "swapped_expected_score": 0.6247768708222167,
+    "abs_diff": 0.29941957308025674,
+    "cv_chars": 716,
+    "cv_tokens": 131
+  },
+  {
+    "pair_id": "0_job_33077_cv",
+    "original_expected_score": 0.8584347008558796,
+    "swapped_expected_score": 2.7273627423864975,
+    "abs_diff": 1.868928041530618,
+    "cv_chars": 222,
+    "cv_tokens": 47
+  },
+  {
+    "pair_id": "0_job_33518_cv",
+    "original_expected_score": 0.17048702697208898,
+    "swapped_expected_score": 0.034452082412699765,
+    "abs_diff": 0.13603494455938922,
+    "cv_chars": 985,
+    "cv_tokens": 191
+  },
+  {
+    "pair_id": "0_job_15693_cv",
+    "original_expected_score": 0.14915380418432228,
+    "swapped_expected_score": 0.15008474921803555,
+    "abs_diff": 0.0009309450337132708,
+    "cv_chars": 924,
+    "cv_tokens": 213
+  },
+  {
+    "pair_id": "0_job_98588_cv",
+    "original_expected_score": 0.0608767481637022,
+    "swapped_expected_score": 0.24748188477740143,
+    "abs_diff": 0.18660513661369924,
+    "cv_chars": 1560,
+    "cv_tokens": 323
+  },
+  {
+    "pair_id": "0_job_35531_cv",
+    "original_expected_score": 0.20468835870285876,
+    "swapped_expected_score": 0.22680296110920975,
+    "abs_diff": 0.02211460240635099,
+    "cv_chars": 1050,
+    "cv_tokens": 225
+  },
+  {
+    "pair_id": "0_job_189676_cv",
+    "original_expected_score": 0.5381335841219459,
+    "swapped_expected_score": 0.7106364536538485,
+    "abs_diff": 0.17250286953190264,
+    "cv_chars": 388,
+    "cv_tokens": 77
+  },
+  {
+    "pair_id": "1_job_170711_cv",
+    "original_expected_score": 2.6788071749722664,
+    "swapped_expected_score": 2.7060554655715285,
+    "abs_diff": 0.027248290599262148,
+    "cv_chars": 2479,
+    "cv_tokens": 570
+  },
+  {
+    "pair_id": "1_job_117793_cv",
+    "original_expected_score": 2.817807225603316,
+    "swapped_expected_score": 2.2437082005688627,
+    "abs_diff": 0.5740990250344535,
+    "cv_chars": 1211,
+    "cv_tokens": 285
+  },
+  {
+    "pair_id": "1_job_118863_cv",
+    "original_expected_score": 2.7543500962836824,
+    "swapped_expected_score": 2.218677007724019,
+    "abs_diff": 0.5356730885596632,
+    "cv_chars": 1494,
+    "cv_tokens": 268
+  },
+  {
+    "pair_id": "1_job_118410_cv",
+    "original_expected_score": 2.8170694918196966,
+    "swapped_expected_score": 2.4993621974281437,
+    "abs_diff": 0.3177072943915529,
+    "cv_chars": 1463,
+    "cv_tokens": 278
+  },
+  {
+    "pair_id": "1_job_112570_cv",
+    "original_expected_score": 2.5914762443766928,
+    "swapped_expected_score": 2.4678860513383123,
+    "abs_diff": 0.12359019303838048,
+    "cv_chars": 663,
+    "cv_tokens": 146
+  },
+  {
+    "pair_id": "1_job_179247_cv",
+    "original_expected_score": 2.976958193353082,
+    "swapped_expected_score": 2.8348022795493106,
+    "abs_diff": 0.14215591380377157,
+    "cv_chars": 936,
+    "cv_tokens": 222
+  },
+  {
+    "pair_id": "1_job_112988_cv",
+    "original_expected_score": 2.8806164544252293,
+    "swapped_expected_score": 2.8344819169843323,
+    "abs_diff": 0.04613453744089702,
+    "cv_chars": 2620,
+    "cv_tokens": 470
+  },
+  {
+    "pair_id": "1_job_192803_cv",
+    "original_expected_score": 1.9600240795018307,
+    "swapped_expected_score": 2.2913008696625803,
+    "abs_diff": 0.3312767901607496,
+    "cv_chars": 1549,
+    "cv_tokens": 334
+  },
+  {
+    "pair_id": "1_job_178043_cv",
+    "original_expected_score": 2.7059076433319342,
+    "swapped_expected_score": 2.835501643021476,
+    "abs_diff": 0.12959399968954166,
+    "cv_chars": 1591,
+    "cv_tokens": 363
+  },
+  {
+    "pair_id": "1_job_87257_cv",
+    "original_expected_score": 2.778028311150577,
+    "swapped_expected_score": 2.5618357026200083,
+    "abs_diff": 0.21619260853056854,
+    "cv_chars": 1470,
+    "cv_tokens": 346
+  },
+  {
+    "pair_id": "2_job_165858_cv",
+    "original_expected_score": 2.1747180965439235,
+    "swapped_expected_score": 2.776412500354333,
+    "abs_diff": 0.6016944038104097,
+    "cv_chars": 2268,
+    "cv_tokens": 448
+  },
+  {
+    "pair_id": "2_job_165934_cv",
+    "original_expected_score": 2.1296465966759794,
+    "swapped_expected_score": 2.6480562707073974,
+    "abs_diff": 0.5184096740314179,
+    "cv_chars": 2417,
+    "cv_tokens": 488
+  },
+  {
+    "pair_id": "2_job_57741_cv",
+    "original_expected_score": 0.9621910723090297,
+    "swapped_expected_score": 2.022211877369156,
+    "abs_diff": 1.0600208050601263,
+    "cv_chars": 2389,
+    "cv_tokens": 488
+  },
+  {
+    "pair_id": "2_job_50023_cv",
+    "original_expected_score": 2.0466855566172266,
+    "swapped_expected_score": 2.4851504017475663,
+    "abs_diff": 0.4384648451303397,
+    "cv_chars": 4940,
+    "cv_tokens": 1034
+  },
+  {
+    "pair_id": "2_job_137090_cv",
+    "original_expected_score": 0.6567407290266466,
+    "swapped_expected_score": 2.3568709728246,
+    "abs_diff": 1.700130243797953,
+    "cv_chars": 4631,
+    "cv_tokens": 878
+  },
+  {
+    "pair_id": "2_job_63342_cv",
+    "original_expected_score": 1.312033195020747,
+    "swapped_expected_score": 2.1988563584633862,
+    "abs_diff": 0.8868231634426393,
+    "cv_chars": 1310,
+    "cv_tokens": 262
+  },
+  {
+    "pair_id": "2_job_7138_cv",
+    "original_expected_score": 1.7578127483706882,
+    "swapped_expected_score": 2.049969966069776,
+    "abs_diff": 0.29215721769908787,
+    "cv_chars": 1412,
+    "cv_tokens": 291
+  },
+  {
+    "pair_id": "2_job_188313_cv",
+    "original_expected_score": 0.44318136308417855,
+    "swapped_expected_score": 0.8223763020316851,
+    "abs_diff": 0.37919493894750655,
+    "cv_chars": 2191,
+    "cv_tokens": 499
+  },
+  {
+    "pair_id": "2_job_48635_cv",
+    "original_expected_score": 1.8048717031448176,
+    "swapped_expected_score": 1.8808682564849617,
+    "abs_diff": 0.0759965533401441,
+    "cv_chars": 1672,
+    "cv_tokens": 353
+  },
+  {
+    "pair_id": "2_job_103152_cv",
+    "original_expected_score": 1.2103546136378722,
+    "swapped_expected_score": 2.7284174563876196,
+    "abs_diff": 1.5180628427497473,
+    "cv_chars": 1446,
+    "cv_tokens": 268
+  },
+  {
+    "pair_id": "3_job_125623_cv",
+    "original_expected_score": 1.000322154057252,
+    "swapped_expected_score": 0.7416654639919179,
+    "abs_diff": 0.2586566900653341,
+    "cv_chars": 1722,
+    "cv_tokens": 312
+  },
+  {
+    "pair_id": "3_job_194669_cv",
+    "original_expected_score": 0.4744924453510926,
+    "swapped_expected_score": 0.39997963005037646,
+    "abs_diff": 0.07451281530071613,
+    "cv_chars": 3039,
+    "cv_tokens": 596
+  },
+  {
+    "pair_id": "3_job_160886_cv",
+    "original_expected_score": 0.526602188628249,
+    "swapped_expected_score": 1.967424090086467,
+    "abs_diff": 1.440821901458218,
+    "cv_chars": 2843,
+    "cv_tokens": 540
+  },
+  {
+    "pair_id": "3_job_2552_cv",
+    "original_expected_score": 1.591633025719971,
+    "swapped_expected_score": 1.9503981203498237,
+    "abs_diff": 0.35876509462985284,
+    "cv_chars": 2500,
+    "cv_tokens": 445
+  },
+  {
+    "pair_id": "3_job_20454_cv",
+    "original_expected_score": 1.3730596442528946,
+    "swapped_expected_score": 1.7891653523030868,
+    "abs_diff": 0.4161057080501922,
+    "cv_chars": 5896,
+    "cv_tokens": 1047
+  },
+  {
+    "pair_id": "3_job_19381_cv",
+    "original_expected_score": 1.7049003329052734,
+    "swapped_expected_score": 1.06684077516481,
+    "abs_diff": 0.6380595577404635,
+    "cv_chars": 2600,
+    "cv_tokens": 457
+  },
+  {
+    "pair_id": "3_job_14912_cv",
+    "original_expected_score": 0.7290199734216632,
+    "swapped_expected_score": 1.4417566780932671,
+    "abs_diff": 0.7127367046716039,
+    "cv_chars": 1433,
+    "cv_tokens": 287
+  },
+  {
+    "pair_id": "3_job_152488_cv",
+    "original_expected_score": 0.7325707393832034,
+    "swapped_expected_score": 0.1161331215324783,
+    "abs_diff": 0.616437617850725,
+    "cv_chars": 1831,
+    "cv_tokens": 318
+  },
+  {
+    "pair_id": "3_job_107367_cv",
+    "original_expected_score": 1.839329250163525,
+    "swapped_expected_score": 1.5354451483827942,
+    "abs_diff": 0.3038841017807308,
+    "cv_chars": 2231,
+    "cv_tokens": 432
+  },
+  {
+    "pair_id": "3_job_19325_cv",
+    "original_expected_score": 0.7002551855661482,
+    "swapped_expected_score": 0.9766323024054984,
+    "abs_diff": 0.2763771168393502,
+    "cv_chars": 2959,
+    "cv_tokens": 550
+  },
+  {
+    "pair_id": "5_job_135144_cv",
+    "original_expected_score": 1.1005420206079917,
+    "swapped_expected_score": 1.1474525794007715,
+    "abs_diff": 0.04691055879277983,
+    "cv_chars": 850,
+    "cv_tokens": 153
+  },
+  {
+    "pair_id": "5_job_86042_cv",
+    "original_expected_score": 0.985503596444404,
+    "swapped_expected_score": 1.0144692523141459,
+    "abs_diff": 0.02896565586974187,
+    "cv_chars": 1262,
+    "cv_tokens": 274
+  },
+  {
+    "pair_id": "5_job_126144_cv",
+    "original_expected_score": 1.4226284704086143,
+    "swapped_expected_score": 1.3130440473853002,
+    "abs_diff": 0.10958442302331406,
+    "cv_chars": 1085,
+    "cv_tokens": 194
+  },
+  {
+    "pair_id": "5_job_113436_cv",
+    "original_expected_score": 2.9398615960273013,
+    "swapped_expected_score": 2.9146406396440128,
+    "abs_diff": 0.025220956383288584,
+    "cv_chars": 1198,
+    "cv_tokens": 262
+  },
+  {
+    "pair_id": "5_job_138769_cv",
+    "original_expected_score": 1.014801888164385,
+    "swapped_expected_score": 1.1339440211585987,
+    "abs_diff": 0.11914213299421372,
+    "cv_chars": 1446,
+    "cv_tokens": 298
+  },
+  {
+    "pair_id": "5_job_92731_cv",
+    "original_expected_score": 0.3861301299321914,
+    "swapped_expected_score": 0.2971724470850084,
+    "abs_diff": 0.08895768284718303,
+    "cv_chars": 1109,
+    "cv_tokens": 222
+  },
+  {
+    "pair_id": "5_job_135712_cv",
+    "original_expected_score": 0.5233129378380775,
+    "swapped_expected_score": 0.6328819780860332,
+    "abs_diff": 0.10956904024795566,
+    "cv_chars": 1158,
+    "cv_tokens": 215
+  },
+  {
+    "pair_id": "5_job_131874_cv",
+    "original_expected_score": 0.606079747644961,
+    "swapped_expected_score": 0.2733986028380656,
+    "abs_diff": 0.33268114480689537,
+    "cv_chars": 712,
+    "cv_tokens": 136
+  },
+  {
+    "pair_id": "5_job_112395_cv",
+    "original_expected_score": 1.4366547299666323,
+    "swapped_expected_score": 0.9629238336043812,
+    "abs_diff": 0.4737308963622512,
+    "cv_chars": 1505,
+    "cv_tokens": 320
+  },
+  {
+    "pair_id": "5_job_103687_cv",
+    "original_expected_score": 0.7493797451961806,
+    "swapped_expected_score": 0.9232269784927899,
+    "abs_diff": 0.17384723329660934,
+    "cv_chars": 1255,
+    "cv_tokens": 260
+  },
+  {
+    "pair_id": "6_job_59970_cv",
+    "original_expected_score": 2.082553374666441,
+    "swapped_expected_score": 1.7336019006301002,
+    "abs_diff": 0.34895147403634064,
+    "cv_chars": 972,
+    "cv_tokens": 183
+  },
+  {
+    "pair_id": "6_job_13032_cv",
+    "original_expected_score": 2.893001902897954,
+    "swapped_expected_score": 2.932243249049387,
+    "abs_diff": 0.03924134615143293,
+    "cv_chars": 939,
+    "cv_tokens": 196
+  },
+  {
+    "pair_id": "6_job_6236_cv",
+    "original_expected_score": 2.1965285935787033,
+    "swapped_expected_score": 2.0266657925575067,
+    "abs_diff": 0.16986280102119666,
+    "cv_chars": 3000,
+    "cv_tokens": 581
+  },
+  {
+    "pair_id": "6_job_100653_cv",
+    "original_expected_score": 2.730961090788161,
+    "swapped_expected_score": 2.7540995249910725,
+    "abs_diff": 0.023138434202911284,
+    "cv_chars": 1111,
+    "cv_tokens": 212
+  },
+  {
+    "pair_id": "6_job_20623_cv",
+    "original_expected_score": 2.4360336336959163,
+    "swapped_expected_score": 2.2638123809105326,
+    "abs_diff": 0.1722212527853837,
+    "cv_chars": 3517,
+    "cv_tokens": 675
+  },
+  {
+    "pair_id": "6_job_137372_cv",
+    "original_expected_score": 2.5605881989573422,
+    "swapped_expected_score": 2.5889374272604337,
+    "abs_diff": 0.0283492283030915,
+    "cv_chars": 1598,
+    "cv_tokens": 306
+  },
+  {
+    "pair_id": "6_job_176518_cv",
+    "original_expected_score": 2.866975538611502,
+    "swapped_expected_score": 2.679146425979882,
+    "abs_diff": 0.18782911263162028,
+    "cv_chars": 3916,
+    "cv_tokens": 835
+  },
+  {
+    "pair_id": "6_job_160711_cv",
+    "original_expected_score": 2.131344303862869,
+    "swapped_expected_score": 2.499565560344526,
+    "abs_diff": 0.36822125648165693,
+    "cv_chars": 1814,
+    "cv_tokens": 322
+  },
+  {
+    "pair_id": "6_job_126144_cv",
+    "original_expected_score": 2.2588177238614167,
+    "swapped_expected_score": 1.2942895086321382,
+    "abs_diff": 0.9645282152292785,
+    "cv_chars": 1085,
+    "cv_tokens": 194
+  },
+  {
+    "pair_id": "6_job_160465_cv",
+    "original_expected_score": 2.914566738942746,
+    "swapped_expected_score": 2.834757799945872,
+    "abs_diff": 0.07980893899687391,
+    "cv_chars": 1253,
+    "cv_tokens": 226
+  },
+  {
+    "pair_id": "7_job_108565_cv",
+    "original_expected_score": 2.0208320197214666,
+    "swapped_expected_score": 2.6511897805847418,
+    "abs_diff": 0.6303577608632751,
+    "cv_chars": 1642,
+    "cv_tokens": 310
+  },
+  {
+    "pair_id": "7_job_58378_cv",
+    "original_expected_score": 1.288313994039693,
+    "swapped_expected_score": 1.9518372767170318,
+    "abs_diff": 0.6635232826773387,
+    "cv_chars": 1031,
+    "cv_tokens": 213
+  },
+  {
+    "pair_id": "7_job_108986_cv",
+    "original_expected_score": 1.9201635239409272,
+    "swapped_expected_score": 2.0350320454895856,
+    "abs_diff": 0.11486852154865845,
+    "cv_chars": 1635,
+    "cv_tokens": 295
+  },
+  {
+    "pair_id": "7_job_109785_cv",
+    "original_expected_score": 2.677443196449487,
+    "swapped_expected_score": 2.4042188626755774,
+    "abs_diff": 0.27322433377390976,
+    "cv_chars": 2759,
+    "cv_tokens": 598
+  },
+  {
+    "pair_id": "7_job_108709_cv",
+    "original_expected_score": 2.851764063496704,
+    "swapped_expected_score": 2.6800695733712008,
+    "abs_diff": 0.1716944901255033,
+    "cv_chars": 1967,
+    "cv_tokens": 378
+  },
+  {
+    "pair_id": "7_job_29904_cv",
+    "original_expected_score": 2.3770736025232786,
+    "swapped_expected_score": 2.530251950667159,
+    "abs_diff": 0.15317834814388043,
+    "cv_chars": 1992,
+    "cv_tokens": 380
+  },
+  {
+    "pair_id": "7_job_109157_cv",
+    "original_expected_score": 2.754835627041986,
+    "swapped_expected_score": 2.562607914344613,
+    "abs_diff": 0.1922277126973726,
+    "cv_chars": 2030,
+    "cv_tokens": 400
+  },
+  {
+    "pair_id": "7_job_30311_cv",
+    "original_expected_score": 2.7050746160793153,
+    "swapped_expected_score": 2.039509897217407,
+    "abs_diff": 0.6655647188619085,
+    "cv_chars": 1646,
+    "cv_tokens": 338
+  },
+  {
+    "pair_id": "7_job_15342_cv",
+    "original_expected_score": 2.851513273632733,
+    "swapped_expected_score": 2.466265704705867,
+    "abs_diff": 0.3852475689268662,
+    "cv_chars": 2544,
+    "cv_tokens": 508
+  },
+  {
+    "pair_id": "7_job_30344_cv",
+    "original_expected_score": 2.7061635160541946,
+    "swapped_expected_score": 2.651268940876206,
+    "abs_diff": 0.05489457517798879,
+    "cv_chars": 1649,
+    "cv_tokens": 314
+  },
+  {
+    "pair_id": "8_job_160415_cv",
+    "original_expected_score": 2.9320780570272804,
+    "swapped_expected_score": 2.8166748918255626,
+    "abs_diff": 0.11540316520171778,
+    "cv_chars": 3004,
+    "cv_tokens": 588
+  },
+  {
+    "pair_id": "8_job_12737_cv",
+    "original_expected_score": 2.6801202640070514,
+    "swapped_expected_score": 2.798102222861683,
+    "abs_diff": 0.11798195885463159,
+    "cv_chars": 2471,
+    "cv_tokens": 506
+  },
+  {
+    "pair_id": "8_job_2297_cv",
+    "original_expected_score": 2.835259502230907,
+    "swapped_expected_score": 2.526879080956355,
+    "abs_diff": 0.3083804212745518,
+    "cv_chars": 2135,
+    "cv_tokens": 347
+  },
+  {
+    "pair_id": "8_job_88511_cv",
+    "original_expected_score": 1.9293723582422841,
+    "swapped_expected_score": 1.1042530519813103,
+    "abs_diff": 0.8251193062609739,
+    "cv_chars": 1650,
+    "cv_tokens": 321
+  },
+  {
+    "pair_id": "8_job_186558_cv",
+    "original_expected_score": 1.93678781529535,
+    "swapped_expected_score": 1.019526941460027,
+    "abs_diff": 0.917260873835323,
+    "cv_chars": 4195,
+    "cv_tokens": 739
+  },
+  {
+    "pair_id": "8_job_58359_cv",
+    "original_expected_score": 2.6499096491725442,
+    "swapped_expected_score": 1.9919822461193082,
+    "abs_diff": 0.657927403053236,
+    "cv_chars": 1552,
+    "cv_tokens": 294
+  },
+  {
+    "pair_id": "8_job_58590_cv",
+    "original_expected_score": 2.8519710611344546,
+    "swapped_expected_score": 2.4991434768738756,
+    "abs_diff": 0.35282758426057903,
+    "cv_chars": 1543,
+    "cv_tokens": 306
+  },
+  {
+    "pair_id": "8_job_2465_cv",
+    "original_expected_score": 2.7771165475120023,
+    "swapped_expected_score": 2.622513565269908,
+    "abs_diff": 0.15460298224209446,
+    "cv_chars": 2477,
+    "cv_tokens": 500
+  },
+  {
+    "pair_id": "8_job_12837_cv",
+    "original_expected_score": 2.4046346483308216,
+    "swapped_expected_score": 2.3423831132495474,
+    "abs_diff": 0.062251535081274234,
+    "cv_chars": 2538,
+    "cv_tokens": 471
+  },
+  {
+    "pair_id": "8_job_176516_cv",
+    "original_expected_score": 2.904349968633745,
+    "swapped_expected_score": 2.434150749964832,
+    "abs_diff": 0.47019921866891323,
+    "cv_chars": 3711,
+    "cv_tokens": 685
+  },
+  {
+    "pair_id": "9_job_152960_cv",
+    "original_expected_score": 0.4691088915639132,
+    "swapped_expected_score": 0.3383392129989263,
+    "abs_diff": 0.13076967856498695,
+    "cv_chars": 2513,
+    "cv_tokens": 541
+  },
+  {
+    "pair_id": "9_job_115518_cv",
+    "original_expected_score": 1.5633528265107213,
+    "swapped_expected_score": 0.9588019471955109,
+    "abs_diff": 0.6045508793152103,
+    "cv_chars": 3013,
+    "cv_tokens": 643
+  },
+  {
+    "pair_id": "9_job_9081_cv",
+    "original_expected_score": 2.3773372051273434,
+    "swapped_expected_score": 2.6230202826138322,
+    "abs_diff": 0.24568307748648888,
+    "cv_chars": 2607,
+    "cv_tokens": 558
+  },
+  {
+    "pair_id": "9_job_68535_cv",
+    "original_expected_score": 0.33272611941512287,
+    "swapped_expected_score": 1.6426592797783934,
+    "abs_diff": 1.3099331603632707,
+    "cv_chars": 1171,
+    "cv_tokens": 224
+  },
+  {
+    "pair_id": "9_job_163981_cv",
+    "original_expected_score": 2.52970529314513,
+    "swapped_expected_score": 2.8172646961071974,
+    "abs_diff": 0.2875594029620676,
+    "cv_chars": 2495,
+    "cv_tokens": 498
+  },
+  {
+    "pair_id": "9_job_209946_cv",
+    "original_expected_score": 1.1543706947354466,
+    "swapped_expected_score": 1.2337385287846265,
+    "abs_diff": 0.07936783404917991,
+    "cv_chars": 1718,
+    "cv_tokens": 368
+  },
+  {
+    "pair_id": "9_job_73032_cv",
+    "original_expected_score": 1.2359658674452767,
+    "swapped_expected_score": 1.760053258095706,
+    "abs_diff": 0.5240873906504293,
+    "cv_chars": 829,
+    "cv_tokens": 193
+  },
+  {
+    "pair_id": "9_job_185561_cv",
+    "original_expected_score": 2.9796499054327086,
+    "swapped_expected_score": 2.957803287936067,
+    "abs_diff": 0.021846617496641407,
+    "cv_chars": 2424,
+    "cv_tokens": 483
+  },
+  {
+    "pair_id": "9_job_116469_cv",
+    "original_expected_score": 2.957749145279761,
+    "swapped_expected_score": 2.939882498263611,
+    "abs_diff": 0.017866647016149706,
+    "cv_chars": 1133,
+    "cv_tokens": 262
+  },
+  {
+    "pair_id": "9_job_101282_cv",
+    "original_expected_score": 0.8239815895034599,
+    "swapped_expected_score": 1.415083523098237,
+    "abs_diff": 0.5911019335947771,
+    "cv_chars": 2167,
+    "cv_tokens": 439
+  },
+  {
+    "pair_id": "10_job_40951_cv",
+    "original_expected_score": 1.52808785584983,
+    "swapped_expected_score": 1.2232438335880362,
+    "abs_diff": 0.30484402226179386,
+    "cv_chars": 1370,
+    "cv_tokens": 294
+  },
+  {
+    "pair_id": "10_job_170059_cv",
+    "original_expected_score": 0.4770415926428967,
+    "swapped_expected_score": 0.1017128315932185,
+    "abs_diff": 0.37532876104967816,
+    "cv_chars": 3236,
+    "cv_tokens": 743
+  },
+  {
+    "pair_id": "10_job_52598_cv",
+    "original_expected_score": 1.4059133468475824,
+    "swapped_expected_score": 1.866284056205263,
+    "abs_diff": 0.46037070935768054,
+    "cv_chars": 2354,
+    "cv_tokens": 601
+  },
+  {
+    "pair_id": "10_job_136675_cv",
+    "original_expected_score": 0.9188362834514912,
+    "swapped_expected_score": 0.9760145696783179,
+    "abs_diff": 0.05717828622682675,
+    "cv_chars": 1046,
+    "cv_tokens": 283
+  },
+  {
+    "pair_id": "10_job_160825_cv",
+    "original_expected_score": 0.09621807189801614,
+    "swapped_expected_score": 0.0489017984653741,
+    "abs_diff": 0.04731627343264204,
+    "cv_chars": 888,
+    "cv_tokens": 187
+  },
+  {
+    "pair_id": "10_job_128595_cv",
+    "original_expected_score": 0.4831165138954296,
+    "swapped_expected_score": 0.13145850008159332,
+    "abs_diff": 0.35165801381383627,
+    "cv_chars": 3913,
+    "cv_tokens": 871
+  },
+  {
+    "pair_id": "10_job_136676_cv",
+    "original_expected_score": 0.22782352129588415,
+    "swapped_expected_score": 0.20911964594258692,
+    "abs_diff": 0.018703875353297233,
+    "cv_chars": 673,
+    "cv_tokens": 168
+  },
+  {
+    "pair_id": "10_job_99017_cv",
+    "original_expected_score": 0.38244170823619045,
+    "swapped_expected_score": 0.28091664630735,
+    "abs_diff": 0.10152506192884042,
+    "cv_chars": 1436,
+    "cv_tokens": 321
+  },
+  {
+    "pair_id": "10_job_3058_cv",
+    "original_expected_score": 0.6515439914596725,
+    "swapped_expected_score": 0.10478843593063192,
+    "abs_diff": 0.5467555555290405,
+    "cv_chars": 3295,
+    "cv_tokens": 717
+  },
+  {
+    "pair_id": "10_job_184125_cv",
+    "original_expected_score": 1.989376601263035,
+    "swapped_expected_score": 1.8043625128896017,
+    "abs_diff": 0.18501408837343325,
+    "cv_chars": 2297,
+    "cv_tokens": 454
+  }
+]

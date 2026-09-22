@@ -1,0 +1,23 @@
+{
+  "pairs_file": "data/processed/train_490_pairs_clean.parquet",
+  "total_pairs": 4283,
+  "valid_pairs": 4283,
+  "invalid_pairs": 0,
+  "grade_distribution": {
+    "0": 316,
+    "1": 898,
+    "2": 2374,
+    "3": 695
+  },
+  "grade_percentages": {
+    "0": 0.07378006070511324,
+    "1": 0.2096661218771889,
+    "2": 0.5542843801074013,
+    "3": 0.16226943731029653
+  },
+  "digit_probability_mass": {
+    "mean": 0.9851485943182965,
+    "p5": 0.9711135029792786,
+    "min": 0.9202680587768555
+  }
+}

@@ -1,0 +1,45 @@
+# Data exclusions
+data/raw/
+data/processed/*.parquet
+data/processed/*hand_labeling*
+data/processed/*tasks*.json
+data/processed/annotator_*_tasks.json
+data/processed/*provenance*.json
+data/processed/*labels*.json
+data/processed/*label*.json
+data/processed/*sample_saved_annotations*.json
+data/processed/*.jsonl
+data/processed/cache/
+*.parquet
+*.pt
+
+# Model binaries and weights (Llama 3.1 Community License attribution / size)
+models/*.txt
+models/*.bin
+models/*.pt
+models/*.onnx
+
+# Credentials and environment
+.env
+.env.*
+*token*.txt
+*token*.json
+.hf_token*
+hf_token*
+
+# Python bytecode and test caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs and cluster run outputs
+*.log
+*.out
+
+# OS & IDE metadata
+.DS_Store
+.vscode/
+.idea/

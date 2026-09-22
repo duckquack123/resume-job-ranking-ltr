@@ -1,0 +1,107 @@
+
+=== DEV JOBS (27) ===
+id | Position | Primary Keyword | Role_Family | Eligible | Rule
+---|---|---|---|---|---
+53525_job | Junior FrontEnd Developer | JavaScript | javascript | Y | Eligible engineering keyword
+70278_job | Middle Full Stack .Net developer | .NET | .net | Y | Eligible engineering keyword
+22047_job | Data Scientist | Data Science | data | Y | Eligible engineering keyword
+86405_job | Online Marketing Manager | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+21604_job | Data Processing Tech | Support | other | N | Blocked by Primary Keyword: support
+129445_job | Shopify Developer | Other | other | Y (Pending) | Generic keyword (other), requires manual review
+140822_job | Web Developer - Wordpress | PHP | php | Y | Eligible engineering keyword
+50223_job | Java Developer (Krakow) | Java | java | Y | Eligible engineering keyword
+110001_job | Senior DevOps | DevOps | devops | Y | Eligible engineering keyword
+87154_job | People Partner | HR | other | N | Blocked by Primary Keyword: hr
+64381_job | Manual QA Engineer | QA | qa | Y | Eligible engineering keyword
+79686_job | Middle/Senior .NET Software Engineer_Europe | .NET | .net | Y | Eligible engineering keyword
+34898_job | Front-End розробник (React Native) | JavaScript | javascript | Y | Eligible engineering keyword
+35178_job | Fullstack developer | PHP | php | Y | Eligible engineering keyword
+141140_job | Wordpress developer | JavaScript | javascript | Y | Eligible engineering keyword
+9423_job | Back-end Web Developer | Node.js | node.js | Y | Eligible engineering keyword
+17637_job | Core Support Engineer | Support | other | N | Blocked by Primary Keyword: support
+26348_job | DevOps Engineer/System Engineer | DevOps | devops | Y | Eligible engineering keyword
+75798_job | Middle QA Engineer | QA | qa | Y | Eligible engineering keyword
+92624_job | Project Manager | Project Manager | project manager | N | Blocked by Primary Keyword: project manager
+19780_job | Data Analyst | Data Science | data | Y | Eligible engineering keyword
+31500_job | Front-end Developer | JavaScript | javascript | Y | Eligible engineering keyword
+46596_job | IT Consultant Trainee (upper-intermediate English and German) | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+39885_job | Game developer / 3D rendering | JavaScript | javascript | Y | Eligible engineering keyword
+105723_job | Senior Angular Developer(only European Union) | JavaScript | javascript | Y | Eligible engineering keyword
+8660_job | Back End (Java/Kotlin) Developer  (office located in Klagenfurt am Wörthersee, Austria (PLZ. 9020) | Java | java | Y | Eligible engineering keyword
+49204_job | Java Developer | Java | java | Y | Eligible engineering keyword
+
+=== TEST JOBS (72) ===
+id | Position | Primary Keyword | Role_Family | Eligible | Rule
+---|---|---|---|---|---
+67261_job | Middle Automation QA Engineer for PSD2 directive implementation | QA Automation | qa automation | Y | Eligible engineering keyword
+99600_job | React Native Developer for a cloud-based IoT product | JavaScript | javascript | Y | Eligible engineering keyword
+40825_job | Golang Developer for Digital Outdoor Advertising Software | Golang | go | Y | Eligible engineering keyword
+133776_job | System Administrator | Sysadmin | devops | Y | Eligible engineering keyword
+3190_job | Android Engineer | Android | other | Y | Eligible engineering keyword
+56225_job | Junior PHP Developer (Khmelnytskyi) | PHP | php | Y | Eligible engineering keyword
+75894_job | Middle QA Engineer | QA | qa | Y | Eligible engineering keyword
+133025_job | Strong Middle/Senior Front-end React.js Engineer | JavaScript | javascript | Y | Eligible engineering keyword
+78372_job | Middle/Senior Front-End Developer (React) | JavaScript | javascript | Y | Eligible engineering keyword
+59861_job | Lead Full Stack Developer | Lead | other | N | Blocked by Primary Keyword: lead
+126264_job | Senior SEO Specialist | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+62592_job | Legal Counsel | Other | other | Y (Pending) | Generic keyword (other), requires manual review
+83059_job | Mobile Application Developer (React Native, Strong Middle / Senior) | JavaScript | javascript | Y | Eligible engineering keyword
+54590_job | Junior lead generation specialist | Lead Generation | other | N | Blocked by Primary Keyword: lead generation
+82458_job | Middle Wordpress Developer | PHP | php | Y | Eligible engineering keyword
+106332_job | Senior Automation QA Engineer / SDET Java | QA Automation | qa automation | Y | Eligible engineering keyword
+14080_job | C# Developer (Back-end) | .NET | .net | Y | Eligible engineering keyword
+118067_job | Senior JavaScript (TypeScript) Developer | JavaScript | javascript | Y | Eligible engineering keyword
+112630_job | Senior Frontend Developer (Vue.js) | JavaScript | javascript | Y | Eligible engineering keyword
+22745_job | Delivery Manager (Poland or Ukraine) | Project Manager | project manager | N | Blocked by Primary Keyword: project manager
+78145_job | Middle/Senior DevOps Engineer (Ukraine/Poland) | DevOps | devops | Y | Eligible engineering keyword
+10639_job | Business Analysis | Business Analyst | other | N | Blocked by Primary Keyword: business analyst
+134642_job | TDM with focus on QA\QC (VR-61299) | QA Automation | qa automation | Y | Eligible engineering keyword
+116069_job | Senior IT Recruiter | HR | other | N | Blocked by Primary Keyword: hr
+45538_job | Invoicing Manager | Other | other | Y (Pending) | Generic keyword (other), requires manual review
+127297_job | Senior System Administrator | Sysadmin | devops | Y | Eligible engineering keyword
+131292_job | Solidity (Polygon) Developer | Java | java | Y | Eligible engineering keyword
+133740_job | System Administrator | Sysadmin | devops | Y | Eligible engineering keyword
+140058_job | VFX Artist | Design | design | N | Blocked by Primary Keyword: design
+8421_job | Backend Engineer (Mobile Team) | PHP | php | Y | Eligible engineering keyword
+128608_job | Senior Web (Marketing) Designer | Design | design | N | Blocked by Primary Keyword: design
+119860_job | Senior .NET 2043/12 | .NET | .net | Y | Eligible engineering keyword
+78456_job | Middle/Senior Frontend (React.js) | JavaScript | javascript | Y | Eligible engineering keyword
+28927_job | Engagement Manager | Other | other | Y (Pending) | Generic keyword (other), requires manual review
+95530_job | QA Automation Engineer | QA Automation | qa automation | Y | Eligible engineering keyword
+95146_job | Python Verification Engineer | QA Automation | qa automation | Y | Eligible engineering keyword
+118824_job | Senior/Lead UX/UI Designer IRC160558 | Design | design | N | Blocked by Primary Keyword: design
+52544_job | Junior Automation Test Engineer (Python) | QA Automation | qa automation | Y | Eligible engineering keyword
+104542_job | Scrum Master, Project Manager | Project Manager | project manager | N | Blocked by Primary Keyword: project manager
+63140_job | Looking for a Senior Java Architect with ElasticSearch experience | Java | java | Y | Eligible engineering keyword
+63096_job | Looking for a MERN Developer with Visualization Library Experience | JavaScript | javascript | Y | Eligible engineering keyword
+63121_job | Looking for a Node JS Engineer | Node.js | node.js | Y | Eligible engineering keyword
+4857_job | Architect for E-commerce part | JavaScript | javascript | Y | Eligible engineering keyword
+7962_job | Back-end Developer (NodeJS) | Node.js | node.js | Y | Eligible engineering keyword
+16769_job | Content Marketing Manager / Copywriter | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+95283_job | QA Automation | QA Automation | qa automation | Y | Eligible engineering keyword
+56658_job | Junior Python Developer | Python | python | Y | Eligible engineering keyword
+56698_job | Junior Python Developer | Python | python | Y | Eligible engineering keyword
+17502_job | Copywriter/Content marketer | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+28219_job | Email Marketer | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+57654_job | Junior Salesforce developer | Other | other | Y (Pending) | Generic keyword (other), requires manual review
+4604_job | AQA Engineer (Java) | QA Automation | qa automation | Y | Eligible engineering keyword
+27647_job | Director of Growth Operations | Other | other | Y (Pending) | Generic keyword (other), requires manual review
+45001_job | Intermediate Software Data Engineering | SQL | sql | Y | Eligible engineering keyword
+19536_job | Data Analyst | Data Analyst | data | Y | Eligible engineering keyword
+4500_job | AQA (c#) | QA Automation | qa automation | Y | Eligible engineering keyword
+101411_job | Ruby Full-Stack Engineer | Ruby | ruby | Y | Eligible engineering keyword
+50967_job | JavaScript Angular Engineer | JavaScript | javascript | Y | Eligible engineering keyword
+3585_job | Angular Developer | Java | java | Y | Eligible engineering keyword
+101499_job | Ruby on Rails Developer | Ruby | ruby | Y | Eligible engineering keyword
+108220_job | Senior C++ Audio Programmer | Unity | other | Y | Eligible engineering keyword
+80274_job | Middle/Senior Python Engineer | Python | python | Y | Eligible engineering keyword
+98164_job | QlikSense Engineer | Data Analyst | data | Y | Eligible engineering keyword
+63855_job | Manual qa | QA | qa | Y | Eligible engineering keyword
+47550_job | IT Recruiter | HR | other | N | Blocked by Primary Keyword: hr
+27951_job | Dynamics AX/365  Developer | Other | other | Y (Pending) | Generic keyword (other), requires manual review
+74785_job | Middle Project Manager | Project Manager | project manager | N | Blocked by Primary Keyword: project manager
+12727_job | Business Development Manager | Sales | other | N | Blocked by Primary Keyword: sales
+65368_job | Marketing generalist | Marketing | marketing | N | Blocked by Primary Keyword: marketing
+15428_job | Cloud Network Engineer | Security | security | Y | Eligible engineering keyword
+125502_job | Senior RoR developer | Ruby | ruby | Y | Eligible engineering keyword
+50672_job | Java Engineer with relocation | Java | java | Y | Eligible engineering keyword

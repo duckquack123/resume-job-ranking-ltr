@@ -1,0 +1,17 @@
+{
+  "K_5": {
+    "total_slots": 780,
+    "total_union_size": 739,
+    "avg_union_per_job": 14.211538461538462,
+    "total_multi_overlap": 41,
+    "multi_overlap_pct": 5.256410256410256,
+    "pairwise": {
+      "bm25_bge_mean": 0.17307692307692307,
+      "bm25_bge_pct": 3.4615384615384617,
+      "bm25_e5_mean": 0.07692307692307693,
+      "bm25_e5_pct": 1.5384615384615385,
+      "bge_e5_mean": 0.5769230769230769,
+      "bge_e5_pct": 11.538461538461538
+    }
+  }
+}
