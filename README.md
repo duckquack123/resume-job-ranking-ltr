@@ -20,8 +20,8 @@
 
 | Phase / Milestone | Status | Key Findings & Metrics |
 |---|---|---|
-| **Phase 1: Data Pipeline & Splitting** | **Complete** | Djinni dataset cleaned, deduplicated across splits (word 5-grams, threshold 0.70). 137,893 Train jobs / 168,137 CVs; 27 frozen Dev jobs / 21,019 CVs; 72 frozen Test jobs / 21,020 CVs. |
-| **LLM Judge Tuning & Validation** | **Complete & Frozen** | Llama-3.1-8B-Instruct prompt tuned on 15-job pilot ($n=45$ tuning pairs, QWK = 0.5284), validated one-time on held-out jobs ($n=41$ pairs, Spearman $r_s = 0.5991$, order-swap averaged). Frozen v4 template executed on 4,283 training pairs. |
+| **Phase 1: Data Pipeline & Splitting** | **Complete** | Djinni dataset cleaned; frozen splits built with word-unigram dedup (threshold 0.85). A word-5-gram (0.70) cross-split dedup was then applied to the train side only (frozen dev/test unchanged). 137,893 Train jobs / 168,137 CVs; 27 frozen Dev jobs / 21,019 CVs; 72 frozen Test jobs / 21,020 CVs. |
+| **LLM Judge Tuning & Validation** | **Complete & Frozen** | Llama-3.1-8B-Instruct prompt tuned on 5 tuning jobs ($n=45$ pairs; QWK 0.5517 single-order, 0.6593 order-averaged), validated one-time on 5 held-out jobs ($n=41$ pairs; QWK 0.3734 [0.0797, 0.6113], Spearman $r_s = 0.5991$ [0.3245, 0.7938], order-averaged; small, 5-job cluster). Frozen v4 template executed on 4,283 training pairs. |
 | **Step 1: LambdaMART Baseline** | **Complete & Frozen** | 15 scale-free features (within-job z-score, ratio-to-top, rank). 5-fold CV NDCG@10 = **0.9221** (vs random **0.8510**). Evaluated on 86 human dev pairs: LambdaMART = 0.8172 vs BGE = 0.8353 vs Random = 0.7593 ($\Delta = +0.0579$, 95% CI `[-0.0140, +0.1305]`). All models, folds, features, and configs frozen and hashed. |
 | **Step C: Gold Test Set Preparation** | **IN PROGRESS (Labeling)** | 52 eligible engineering test jobs pooled ($K=3$ per retriever: BM25, BGE, E5; 446 unique pairs). Offline labeling tool (`labeler_gold.html`) verified locally with 0 network calls. Task files partitioned for Annotator A (446 pairs) and Annotator B (115 double-labeled pairs). |
 | **Step A: Cross-Encoder Integration** | *Pending* | Small cross-encoder model training and out-of-fold scoring across company-grouped folds. |
@@ -89,7 +89,7 @@ All experiments in this repository strictly enforce the pre-registered methodolo
 1. **Zero Fabrication:** Never fabricate numbers, citations, or synthetic results. Unknowns are explicitly marked `TODO` or `UNKNOWN`.
 2. **Statistical Rigor:** Every reported metric is derived from logged runs and reported with sample size ($n$), 95% confidence intervals (job-clustered / paired bootstrap), and paired comparison tests.
 3. **Label Independence:** Supervision labels are derived strictly from human evaluations and independent LLM rubric judgments—never from retrieval scores, lexical overlap, or model features.
-4. **Leakage Prevention:** Split assignments are partitioned strictly by job and company; resume pools are disjoint; cross-split near-duplicates are purged.
+4. **Leakage Prevention:** Split assignments are partitioned strictly by job and company; resume pools are disjoint; cross-split near-duplicates are purged (unigram 0.85 for the frozen splits; 5-gram 0.70 audit/train-side removal).
 5. **Pre-Gold Freeze:** Hyperparameters, feature schemas, model seeds, and fold definitions are permanently locked and hashed prior to evaluating gold test labels. Gold test labels are evaluated strictly once.
 6. **Privacy & Offline Integrity:** No external cloud-based annotation platforms or external web requests are used during annotation; all task data remains local and offline.
 

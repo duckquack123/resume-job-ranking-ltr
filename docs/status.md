@@ -1,6 +1,6 @@
 # Project Status
 
-**Current Phase:** Phase 2 (Learning Mode: LLM Judge Implementation & Tuning)
+**Current Phase:** Phase 2, Step C (gold labeling prep complete; awaiting approval to distribute annotation files). Judge tuning and Step 1 are frozen.
 
 ## Approved Decisions
 - **Datasets:** Djinni English jobs and CVs (MIT license). TalentCLEF zero-shot only.
@@ -8,15 +8,15 @@
 - **Annotation:** 0-3 rubric plus an Invalid flag; quadratic-weighted kappa.
 - **Models:** LLM Judge: Llama-3.1-8B-Instruct. LLM Re-ranker: Qwen2.5-7B-Instruct.
 - **Hardware:** A30 24GB.
-- **Splitting:** 3 jobs per company cap in gold; separate train/dev/test CV pools; 27 dev jobs (3 per company), 72 test jobs.
+- **Splitting:** 3 jobs per company cap in gold; separate train/dev/test CV pools; 27 dev jobs (21 eligible engineering; 6 dry-run + 15 pilot, of which 10 were hand-labeled), 72 test jobs (52 eligible, used as gold).
 - **Data Handling:** No cloud-synced folders for annotator laptops. Only the pairs to be judged are exported locally. Files must be deleted after the pilot and main phases.
 - **Annotation Export Design:** Whole jobs per annotator; separate files for (a) dry run/pilot, (b) main single-annotated, (c) main double-annotated; randomized order; stable pair IDs; provenance mapping kept in a separate file annotators never receive; no partner labels visible; no network calls; per-pair start/end timestamps recorded.
 - **Adjudication Rule:** Compute agreement (QWK) on ALL double-annotated pairs before any discussion or dropping. Discuss every disagreement and record one consensus label. Single-annotated pairs are left unchanged.
 - **Identical-Label Drop Rule:** Applied to evaluation only. After adjudication, for each job, if the final consensus labels for all its candidates are identical, drop those pairs and report the count. Agreement metrics are always reported on the full pre-drop set.
 - **Role-Family Mapping:** Derived from Primary Keyword using a fixed lookup table (ROLE_MAP in data_pipeline.py). Used only for stratification and robustness splits, never as a feature or label. Unmapped keywords map to 'other'.
 - **Evaluation:** Judged-pool evaluation plus condensed-list nDCG.
-- **Tuning:** Judge-prompt tuning on the 15-job pilot only (dev jobs excluding dry run).
-- **Near-Duplicate Dedup (Cross-Split):** Word 5-grams, 128 perms, threshold 0.70. Removed from train side only; frozen dev/test IDs unchanged.
+- **Tuning:** Judge-prompt tuning on 5 tuning jobs only (45 pairs). The 10 hand-labeled dev jobs (6 dry-run + 4 pilot, of the 21 eligible dev jobs) were split 5 tuning / 5 held-out (seed 42) before any judge output was seen. Held-out (41 pairs) was evaluated once.
+- **Near-Duplicate Dedup:** The frozen splits were created with word-unigram dedup at threshold 0.85 (see decisions.md, 2026-09-20). A later cross-split pass (word 5-grams, 128 perms, threshold 0.70) removed items from the train side only; frozen dev/test IDs unchanged. The 5-gram pass is not the basis of the frozen files.
 
 ## Rejected Approaches (with reasons)
 - **datasetmaster resumes:** Rejected due to unclear provenance/consent, mixed real and synthetic resumes, and domain mismatch with the Djinni jobs.

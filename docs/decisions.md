@@ -169,3 +169,4 @@
 
 
 
+- **2026-10-01:** Doc consistency fixes (no data, code or frozen files changed): README judge-tuning row now cites 5 tuning jobs (n=45; QWK 0.5517 single-order / 0.6593 order-averaged) instead of "15-job pilot, QWK 0.5284" (0.5284 had no source in logs or docs and was removed); README/status dedup wording now states frozen splits used unigram 0.85 and the 5-gram 0.70 pass was train-side only; status.md Tuning/Splitting/Current Phase lines updated to match decisions.md.
